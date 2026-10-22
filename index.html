@@ -1,77 +1,3726 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FrameForge — Photography & Video Knowledge Network</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23070b12'/%3E%3Cpath d='M20 34h14l6-9h20l6 9h14a7 7 0 0 1 7 7v31a7 7 0 0 1-7 7H20a7 7 0 0 1-7-7V41a7 7 0 0 1 7-7Z' fill='none' stroke='%23b9ff4a' stroke-width='6'/%3E%3Ccircle cx='50' cy='57' r='14' fill='none' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#06090e;--surface:#0d141d;--surface2:#111b26;--text:#f4f7fa;--muted:#98a5b3;--line:rgba(255,255,255,.11);--lime:#b9ff4a;--cyan:#62e6ff;--violet:#a995ff;--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 12% 0%,rgba(185,255,74,.08),transparent 24%),radial-gradient(circle at 88% 15%,rgba(98,230,255,.08),transparent 25%),radial-gradient(circle at 50% 100%,rgba(169,149,255,.07),transparent 30%)}
-a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}section{padding:76px 0;position:relative}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.05em}h1{font-size:clamp(3.05rem,6.6vw,6.6rem);line-height:.9;margin:0;max-width:820px}.hero-title{position:relative;isolation:isolate}.shine-line{display:inline-block;color:#f4f7fa;background:linear-gradient(110deg,#f4f7fa 0%,#f4f7fa 34%,#fff 45%,#b9ff4a 50%,#f4f7fa 57%,#f4f7fa 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:titleShine 5.5s cubic-bezier(.2,.7,.2,1) infinite}.shine-line.accent{animation-delay:1.15s}.title-spark{position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 18px #b9ff4a,0 0 36px #62e6ff;opacity:0;animation:spark 3.8s ease-in-out infinite}.title-spark.s1{left:55%;top:16%;}.title-spark.s2{left:80%;top:68%;animation-delay:1.9s}@keyframes titleShine{0%,55%{background-position:120% 0}78%,100%{background-position:-120% 0}}@keyframes spark{0%,65%,100%{opacity:0;transform:scale(.3)}72%{opacity:1;transform:scale(1)}78%{opacity:0;transform:scale(1.8)}}h2{font-size:clamp(2.3rem,4.5vw,4.8rem);line-height:.94;margin:0}h3{font-size:1.3rem;margin:0}p{color:var(--muted);line-height:1.75}
-.eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);font-weight:800;margin-bottom:15px}
-.btn{min-height:50px;padding:0 21px;border-radius:999px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;transition:.35s;position:relative;overflow:hidden}.btn:hover{transform:translateY(-3px);border-color:rgba(185,255,74,.35);box-shadow:0 18px 50px rgba(0,0,0,.3)}.btn.primary{background:var(--lime);color:#071008;border-color:var(--lime);font-weight:800}
-.logo-mark{width:42px;height:42px;display:grid;place-items:center;filter:drop-shadow(0 0 14px rgba(185,255,74,.12));transition:.35s}.logo-mark svg{width:100%;height:100%;display:block}.brand:hover .logo-mark{transform:rotate(-4deg) scale(1.04);filter:drop-shadow(0 0 18px rgba(185,255,74,.28))}.brand-word{font-family:"Space Grotesk",sans-serif;font-weight:800;letter-spacing:-.04em;font-size:.96rem}.brand-word span{color:#d9e2ea}.brand-word b{color:var(--lime)}.nav{position:fixed;z-index:50;top:12px;left:50%;transform:translateX(-50%);width:min(1190px,calc(100% - 24px));padding:10px 13px 10px 15px;border:1px solid var(--line);border-radius:20px;background:rgba(6,9,14,.7);backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:800}.mark{width:39px;height:39px;border-radius:12px;border:1px solid rgba(185,255,74,.45);display:grid;place-items:center;background:#0c1219}.mark i{width:17px;height:12px;border:2px solid var(--lime);border-radius:4px}.links{display:flex;gap:23px}.links a{font-size:.78rem;color:#c4ccd5}.links a:hover{color:var(--lime)}.hamb{display:none;background:none;border:0;color:white;font-size:1.4rem}
-.hero{min-height:92vh;display:flex;align-items:center;padding-top:110px;padding-bottom:68px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}.hero-copy p{font-size:1.06rem;max-width:670px;margin:26px 0}.actions{display:flex;gap:10px;flex-wrap:wrap}.hero-media{height:500px;position:relative}.hero-img{position:absolute;inset:10px 0 10px 28px;border:1px solid var(--line);border-radius:34px;overflow:hidden;transform:rotateY(-7deg) rotateZ(1deg);box-shadow:0 40px 100px rgba(0,0,0,.5);transition:.3s}.hero-img img{width:100%;height:100%;object-fit:cover;display:block}.hero-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(4,7,11,.8))}.hero-chip{position:absolute;left:0;bottom:55px;z-index:3;border:1px solid var(--line);background:rgba(9,13,18,.78);backdrop-filter:blur(15px);border-radius:18px;padding:17px 19px;animation:float 4s ease-in-out infinite}.hero-chip b{display:block}.hero-chip span{font-size:.72rem;color:#a6b1bc}.orb{position:absolute;width:240px;height:240px;border-radius:50%;right:-45px;top:-40px;background:radial-gradient(circle,rgba(98,230,255,.2),transparent 65%);animation:orb 8s infinite}.orb.two{width:170px;height:170px;left:-60px;bottom:20px;background:radial-gradient(circle,rgba(185,255,74,.17),transparent 65%);animation-delay:-3s}
-@keyframes float{50%{transform:translateY(-12px)}}@keyframes orb{50%{transform:translate(20px,25px) scale(1.12)}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes pulse{70%{box-shadow:0 0 0 28px transparent}}
-.ticker{border-block:1px solid var(--line);background:#090d13;overflow:hidden}.ticker-track{display:flex;width:max-content;gap:45px;padding:17px 0;animation:marquee 25s linear infinite}.ticker span{font-size:.7rem;letter-spacing:.18em;color:#aeb8c3;text-transform:uppercase}.ticker i{color:var(--lime);font-style:normal}
-.head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:30px}.head h2{position:relative}.head h2:after{content:"";display:block;width:54px;height:3px;margin-top:16px;border-radius:99px;background:linear-gradient(90deg,var(--lime),var(--cyan));box-shadow:0 0 18px rgba(185,255,74,.25)}.head>p{max-width:510px}.dark{background:linear-gradient(180deg,#080c12,#0d141d);border-block:1px solid var(--line)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{border:1px solid var(--line);border-radius:25px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));transition:.45s}.card:hover{transform:translateY(-8px);border-color:rgba(185,255,74,.3);box-shadow:0 30px 80px rgba(0,0,0,.3)}.photo{height:220px;overflow:hidden;position:relative;background:#111a24}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.8s}.card:hover .photo img{transform:scale(1.08)}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.16),transparent 65%);transform:translateX(-120%);transition:.9s}.card:hover .photo:after{transform:translateX(120%)}.body{padding:22px}.body p{font-size:.87rem;margin:10px 0 18px}.tag{display:inline-flex;padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:#c8d0d8;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
-.gif-stage{height:345px;border-radius:28px;border:1px solid var(--line);overflow:hidden;position:relative;background:#0b1118;box-shadow:0 24px 70px rgba(0,0,0,.28)}.gif-stage img{width:100%;height:100%;object-fit:cover;display:block;opacity:.86;animation:visualDrift 14s ease-in-out infinite alternate;transform:scale(1.035)}.gif-stage:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.13) 48%,transparent 57%);transform:translateX(-120%);animation:imageSweep 7s ease-in-out infinite;pointer-events:none}.gif-stage:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,7,11,.9),rgba(4,7,11,.42) 52%,rgba(4,7,11,.08)),linear-gradient(0deg,rgba(4,7,11,.7),transparent 58%);pointer-events:none}@keyframes visualDrift{0%{transform:scale(1.035) translate3d(0,0,0)}100%{transform:scale(1.075) translate3d(-1.2%, -1%,0)}}@keyframes imageSweep{0%,58%{transform:translateX(-120%)}78%,100%{transform:translateX(120%)}}.gif-copy{position:absolute;z-index:3;left:52px;top:50%;transform:translateY(-50%);max-width:610px}.gif-copy h2{font-size:clamp(2.45rem,4.5vw,4.8rem)}.motion-title{animation:motionGlow 4.5s ease-in-out infinite}@keyframes motionGlow{0%,100%{text-shadow:0 0 0 rgba(185,255,74,0)}50%{text-shadow:0 0 26px rgba(185,255,74,.16)}}.gif-copy p{margin-top:17px;max-width:540px}.play{margin-top:23px;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:#081008;font-weight:900;animation:pulse 2s infinite}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:17px}.split-card{border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#0d141d;height:340px;position:relative}.split-card img{width:100%;height:100%;object-fit:cover;transition:1s}.split-card:hover img{transform:scale(1.045)}.split-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,7,11,.92),transparent 58%)}.split-copy{position:absolute;z-index:2;bottom:25px;left:26px;right:26px}.split-copy p{margin-top:9px}
-.orbit{height:340px;border-radius:28px;border:1px solid var(--line);position:relative;overflow:hidden;background:#0a1017}.orbit img{width:100%;height:100%;object-fit:cover;opacity:.82;animation:visualDrift 16s ease-in-out infinite alternate;transform:scale(1.04)}.orbit:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,transparent 0 12%,rgba(5,8,12,.35) 30%,rgba(5,8,12,.9) 80%)}.orbit-core{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#dfff9e,#9bd33f 20%,#15200e 55%,#080d11 75%);color:#071006;font-weight:900;box-shadow:0 0 100px rgba(185,255,74,.28);animation:core 4s ease-in-out infinite}@keyframes core{50%{transform:translate(-50%,-50%) scale(1.05)}}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{padding:28px;border:1px solid var(--line);border-radius:23px;background:rgba(255,255,255,.03)}.stat strong{display:block;color:var(--lime);font-size:3.2rem;letter-spacing:-.07em}.stat span{font-size:.76rem;color:#a1acb8}.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}.step{padding:25px 20px;min-height:190px;background:rgba(255,255,255,.03);border-top:2px solid var(--lime);border-radius:0 0 18px 18px}.step b{font-size:.66rem;letter-spacing:.15em;color:var(--lime)}.step h3{margin:22px 0 9px}
-.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.faq-list{display:grid;gap:10px}.faq-item{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:rgba(255,255,255,.025)}.faq-q{width:100%;border:0;background:none;color:white;padding:20px;text-align:left;display:flex;justify-content:space-between;cursor:pointer;font-weight:700}.faq-a{max-height:0;overflow:hidden;padding:0 20px;transition:.35s}.faq-item.open .faq-a{max-height:150px;padding:0 20px 18px}
-.contact{display:grid;grid-template-columns:.75fr 1.25fr;gap:17px}.contact-card{border:1px solid var(--line);border-radius:28px;padding:30px;background:linear-gradient(145deg,#101925,#0a1119)}.contact-list{display:grid;gap:11px;margin-top:22px}.contact-list div{padding:16px;border:1px solid var(--line);border-radius:15px}.contact-list small{display:block;color:var(--lime);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}.map{height:180px;margin-top:14px;border:1px solid var(--line);border-radius:18px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(185,255,74,.07),transparent),repeating-linear-gradient(0deg,transparent 0 28px,rgba(255,255,255,.035) 29px 30px),repeating-linear-gradient(90deg,transparent 0 42px,rgba(255,255,255,.035) 43px 44px)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.63rem;letter-spacing:.12em;color:#aeb8c2}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#070c12;color:white;padding:14px;outline:none}.field textarea{min-height:135px;resize:vertical}
-.reveal{opacity:0;transform:translateY(25px);transition:.8s cubic-bezier(.2,.7,.2,1)}.reveal.show{opacity:1;transform:none}footer{padding:34px 0;border-top:1px solid var(--line)}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot p{font-size:.74rem}.footlinks{display:flex;gap:18px;font-size:.75rem;color:#9ca7b3}
-@media(max-width:980px){.links{display:none}.hamb{display:block}.hero-grid,.contact,.faq,.split{grid-template-columns:1fr}.hero{min-height:auto}.hero-media{height:440px}.grid4,.stats,.workflow{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.wrap{width:calc(100% - 24px)}section{padding:58px 0}.hero{padding-top:100px;padding-bottom:50px}.hero-media{height:350px}.hero-img{inset:8px 0}.hero-chip{left:6px;bottom:15px}.head{display:block}.head>p{margin-top:14px}.grid3,.grid4,.stats,.workflow,.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.gif-stage{height:320px}.gif-copy{left:24px;right:24px}.gif-copy h2{font-size:2.7rem}.orbit{height:300px}.orbit-core{width:112px;height:112px;font-size:.72rem}.foot{display:grid}.footlinks{flex-wrap:wrap}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}}
-.visual-badge{position:absolute;z-index:4;right:18px;top:18px;padding:8px 11px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(4,7,11,.48);backdrop-filter:blur(12px);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#eaf2f8}.visual-badge:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lime);margin-right:7px;box-shadow:0 0 12px var(--lime)}</style></head>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FrameForge — Photography & Video Knowledge Network</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23070b12'/%3E%3Cpath d='M20 34h14l6-9h20l6 9h14a7 7 0 0 1 7 7v31a7 7 0 0 1-7 7H20a7 7 0 0 1-7-7V41a7 7 0 0 1 7-7Z' fill='none' stroke='%23b9ff4a' stroke-width='6'/%3E%3Ccircle cx='50' cy='57' r='14' fill='none' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #06090e;
+            --surface: #0d141d;
+            --surface2: #111b26;
+            --text: #f4f7fa;
+            --muted: #98a5b3;
+            --line: rgba(255, 255, 255, .11);
+            --lime: #b9ff4a;
+            --cyan: #62e6ff;
+            --violet: #a995ff;
+            --max: 1240px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            overflow-x: hidden
+        }
+
+        body:before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+            background: radial-gradient(circle at 12% 0%, rgba(185, 255, 74, .08), transparent 24%), radial-gradient(circle at 88% 15%, rgba(98, 230, 255, .08), transparent 25%), radial-gradient(circle at 50% 100%, rgba(169, 149, 255, .07), transparent 30%)
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit
+        }
+
+        .wrap {
+            width: min(var(--max), calc(100% - 36px));
+            margin: auto
+        }
+
+        section {
+            padding: 76px 0;
+            position: relative
+        }
+
+        section,
+        [id] {
+            scroll-margin-top: 100px
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -.05em
+        }
+
+        h1 {
+            font-size: clamp(3.05rem, 6.6vw, 6.6rem);
+            line-height: .9;
+            margin: 0;
+            max-width: 820px
+        }
+
+        .hero-title {
+            position: relative;
+            isolation: isolate
+        }
+
+        .shine-line {
+            display: inline-block;
+            color: #f4f7fa;
+            background: linear-gradient(110deg, #f4f7fa 0%, #f4f7fa 34%, #fff 45%, #b9ff4a 50%, #f4f7fa 57%, #f4f7fa 100%);
+            background-size: 240% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleShine 5.5s cubic-bezier(.2, .7, .2, 1) infinite
+        }
+
+        .shine-line.accent {
+            animation-delay: 1.15s
+        }
+
+        .title-spark {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 18px #b9ff4a, 0 0 36px #62e6ff;
+            opacity: 0;
+            animation: spark 3.8s ease-in-out infinite
+        }
+
+        .title-spark.s1 {
+            left: 55%;
+            top: 16%;
+        }
+
+        .title-spark.s2 {
+            left: 80%;
+            top: 68%;
+            animation-delay: 1.9s
+        }
+
+        @keyframes titleShine {
+
+            0%,
+            55% {
+                background-position: 120% 0
+            }
+
+            78%,
+            100% {
+                background-position: -120% 0
+            }
+        }
+
+        @keyframes spark {
+
+            0%,
+            65%,
+            100% {
+                opacity: 0;
+                transform: scale(.3)
+            }
+
+            72% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            78% {
+                opacity: 0;
+                transform: scale(1.8)
+            }
+        }
+
+        h2 {
+            font-size: clamp(2.3rem, 4.5vw, 4.8rem);
+            line-height: .94;
+            margin: 0
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 0
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.75
+        }
+
+        .eyebrow {
+            font-size: .68rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--lime);
+            font-weight: 800;
+            margin-bottom: 15px
+        }
+
+        .btn {
+            min-height: 50px;
+            padding: 0 21px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .04);
+            color: var(--text);
+            cursor: pointer;
+            transition: .35s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            border-color: rgba(185, 255, 74, .35);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .3)
+        }
+
+        .btn.primary {
+            background: var(--lime);
+            color: #071008;
+            border-color: var(--lime);
+            font-weight: 800
+        }
+
+        .mobile-cta {
+            display: none !important;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+        }
+
+        .fixed-bg-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(6, 9, 14, .88);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .6);
+            padding: 12px 0;
+            transition: background .3s, border-color .3s, box-shadow .3s, padding .3s
+        }
+
+        .fixed-bg-header.scrolled {
+            background: rgba(6, 9, 14, .96);
+            border-bottom-color: rgba(185, 255, 74, .2);
+            box-shadow: 0 14px 40px -8px rgba(0, 0, 0, .8), 0 1px 0 rgba(185, 255, 74, .08);
+            padding: 10px 0
+        }
+
+        .nav {
+            position: relative;
+            width: min(1190px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 10px 18px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(13, 20, 29, .78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 4px 22px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color .3s, box-shadow .3s
+        }
+
+        .nav:hover {
+            border-color: rgba(185, 255, 74, .28);
+            box-shadow: 0 6px 28px rgba(0, 0, 0, .45), 0 0 18px rgba(185, 255, 74, .08)
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            filter: drop-shadow(0 0 14px rgba(185, 255, 74, .12));
+            transition: .35s
+        }
+
+        .logo-mark svg {
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+
+        .brand:hover .logo-mark {
+            transform: rotate(-4deg) scale(1.04);
+            filter: drop-shadow(0 0 18px rgba(185, 255, 74, .28))
+        }
+
+        .brand-word {
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 800;
+            letter-spacing: -.04em;
+            font-size: .96rem
+        }
+
+        .brand-word span {
+            color: #d9e2ea
+        }
+
+        .brand-word b {
+            color: var(--lime)
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800
+        }
+
+        .mark {
+            width: 39px;
+            height: 39px;
+            border-radius: 12px;
+            border: 1px solid rgba(185, 255, 74, .45);
+            display: grid;
+            place-items: center;
+            background: #0c1219
+        }
+
+        .mark i {
+            width: 17px;
+            height: 12px;
+            border: 2px solid var(--lime);
+            border-radius: 4px
+        }
+
+        .links {
+            display: flex;
+            gap: 6px;
+            align-items: center
+        }
+
+        .links a {
+            font-size: .80rem;
+            color: #c4ccd5;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            transition: all .25s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, .05);
+            border-color: rgba(255, 255, 255, .1);
+        }
+
+        .links a.active {
+            color: var(--lime);
+            background: rgba(185, 255, 74, .12);
+            border-color: rgba(185, 255, 74, .38);
+            box-shadow: 0 0 14px rgba(185, 255, 74, .18);
+            font-weight: 700;
+        }
+
+        .hamb {
+            display: none;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            width: 38px;
+            height: 38px;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: .25s
+        }
+
+        .hamb:hover {
+            border-color: var(--lime);
+            color: var(--lime)
+        }
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            padding-top: 124px;
+            padding-bottom: 68px;
+            overflow: hidden
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.02fr .98fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .hero-copy p {
+            font-size: 1.06rem;
+            max-width: 670px;
+            margin: 26px 0
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .hero-media {
+            height: 500px;
+            position: relative
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 10px 0 10px 28px;
+            border: 1px solid var(--line);
+            border-radius: 34px;
+            overflow: hidden;
+            transform: rotateY(-7deg) rotateZ(1deg);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, .5);
+            transition: .3s
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block
+        }
+
+        .hero-img:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(4, 7, 11, .8))
+        }
+
+        .hero-chip {
+            position: absolute;
+            left: 0;
+            bottom: 55px;
+            z-index: 3;
+            border: 1px solid var(--line);
+            background: rgba(9, 13, 18, .78);
+            backdrop-filter: blur(15px);
+            border-radius: 18px;
+            padding: 17px 19px;
+            animation: float 4s ease-in-out infinite
+        }
+
+        .hero-chip b {
+            display: block
+        }
+
+        .hero-chip span {
+            font-size: .72rem;
+            color: #a6b1bc
+        }
+
+        .orb {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            right: -45px;
+            top: -40px;
+            background: radial-gradient(circle, rgba(98, 230, 255, .2), transparent 65%);
+            animation: orb 8s infinite
+        }
+
+        .orb.two {
+            width: 170px;
+            height: 170px;
+            left: -60px;
+            bottom: 20px;
+            background: radial-gradient(circle, rgba(185, 255, 74, .17), transparent 65%);
+            animation-delay: -3s
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        @keyframes orb {
+            50% {
+                transform: translate(20px, 25px) scale(1.12)
+            }
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        @keyframes pulse {
+            70% {
+                box-shadow: 0 0 0 28px transparent
+            }
+        }
+
+        .ticker {
+            border-block: 1px solid var(--line);
+            background: #090d13;
+            overflow: hidden
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            gap: 45px;
+            padding: 17px 0;
+            animation: marquee 25s linear infinite
+        }
+
+        .ticker span {
+            font-size: .7rem;
+            letter-spacing: .18em;
+            color: #aeb8c3;
+            text-transform: uppercase
+        }
+
+        .ticker i {
+            color: var(--lime);
+            font-style: normal
+        }
+
+        .head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px
+        }
+
+        .head h2 {
+            position: relative
+        }
+
+        .head h2:after {
+            content: "";
+            display: block;
+            width: 54px;
+            height: 3px;
+            margin-top: 16px;
+            border-radius: 99px;
+            background: linear-gradient(90deg, var(--lime), var(--cyan));
+            box-shadow: 0 0 18px rgba(185, 255, 74, .25)
+        }
+
+        .head>p {
+            max-width: 510px
+        }
+
+        .dark {
+            background: linear-gradient(180deg, #080c12, #0d141d);
+            border-block: 1px solid var(--line)
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px
+        }
+
+        .grid4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: 25px;
+            overflow: hidden;
+            background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .018));
+            transition: .45s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(185, 255, 74, .3);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, .3);
+        }
+
+        .photo {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: #111a24;
+            flex-shrink: 0;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: .8s;
+        }
+
+        .card:hover .photo img {
+            transform: scale(1.08);
+        }
+
+        .photo:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .16), transparent 65%);
+            transform: translateX(-120%);
+            transition: .9s;
+        }
+
+        .card:hover .photo:after {
+            transform: translateX(120%);
+        }
+
+        .body {
+            padding: 24px 22px 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        /* Row 2: Eye brow tag alignment */
+        .card .body .tag,
+        .body .tag {
+            align-self: flex-start;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            height: 26px;
+            line-height: 1;
+            padding: 6px 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: #c8d0d8;
+            font-size: .64rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Row 3: Heading alignment with uniform reserved height */
+        .card .body h3,
+        .body h3 {
+            font-size: 1.25rem;
+            line-height: 1.35;
+            margin: 0 0 12px 0 !important;
+            min-height: 2.85em;
+            display: flex;
+            align-items: flex-start;
+            color: #fff;
+            letter-spacing: -.03em;
+        }
+
+        /* Row 4: Subheading description alignment with uniform reserved height */
+        .card .body p,
+        .body p {
+            font-size: .87rem;
+            line-height: 1.55;
+            color: var(--muted);
+            margin: 0 0 20px 0;
+            min-height: 4.85em;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Row 5: Links and more button pinned to bottom on identical horizontal baseline */
+        .card .body a.btn,
+        .card .body .btn,
+        .body a.btn,
+        .body .btn {
+            margin-top: auto;
+            align-self: flex-start;
+            min-height: 46px;
+            padding: 0 20px;
+            font-size: .84rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border-radius: 999px;
+            transition: all .25s ease;
+        }
+
+        .gif-stage {
+            height: 345px;
+            border-radius: 28px;
+            border: 1px solid var(--line);
+            overflow: hidden;
+            position: relative;
+            background: #0b1118;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .28)
+        }
+
+        .gif-stage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: .86;
+            animation: visualDrift 14s ease-in-out infinite alternate;
+            transform: scale(1.035)
+        }
+
+        .gif-stage:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(115deg, transparent 0 38%, rgba(255, 255, 255, .13) 48%, transparent 57%);
+            transform: translateX(-120%);
+            animation: imageSweep 7s ease-in-out infinite;
+            pointer-events: none
+        }
+
+        .gif-stage:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(4, 7, 11, .9), rgba(4, 7, 11, .42) 52%, rgba(4, 7, 11, .08)), linear-gradient(0deg, rgba(4, 7, 11, .7), transparent 58%);
+            pointer-events: none
+        }
+
+        @keyframes visualDrift {
+            0% {
+                transform: scale(1.035) translate3d(0, 0, 0)
+            }
+
+            100% {
+                transform: scale(1.075) translate3d(-1.2%, -1%, 0)
+            }
+        }
+
+        @keyframes imageSweep {
+
+            0%,
+            58% {
+                transform: translateX(-120%)
+            }
+
+            78%,
+            100% {
+                transform: translateX(120%)
+            }
+        }
+
+        .gif-copy {
+            position: absolute;
+            z-index: 3;
+            left: 52px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 610px
+        }
+
+        .gif-copy h2 {
+            font-size: clamp(2.45rem, 4.5vw, 4.8rem)
+        }
+
+        .motion-title {
+            animation: motionGlow 4.5s ease-in-out infinite
+        }
+
+        @keyframes motionGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 0 rgba(185, 255, 74, 0)
+            }
+
+            50% {
+                text-shadow: 0 0 26px rgba(185, 255, 74, .16)
+            }
+        }
+
+        .gif-copy p {
+            margin-top: 17px;
+            max-width: 540px
+        }
+
+        .play {
+            margin-top: 23px;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--lime);
+            color: #081008;
+            font-weight: 900;
+            animation: pulse 2s infinite
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px
+        }
+
+        .split-card {
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            overflow: hidden;
+            background: #0d141d;
+            height: 340px;
+            position: relative
+        }
+
+        .split-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1s
+        }
+
+        .split-card:hover img {
+            transform: scale(1.045)
+        }
+
+        .split-card:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(4, 7, 11, .92), transparent 58%)
+        }
+
+        .split-copy {
+            position: absolute;
+            z-index: 2;
+            bottom: 25px;
+            left: 26px;
+            right: 26px
+        }
+
+        .split-copy p {
+            margin-top: 9px
+        }
+
+        .orbit {
+            height: 340px;
+            border-radius: 28px;
+            border: 1px solid var(--line);
+            position: relative;
+            overflow: hidden;
+            background: #0a1017
+        }
+
+        .orbit img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .82;
+            animation: visualDrift 16s ease-in-out infinite alternate;
+            transform: scale(1.04)
+        }
+
+        .orbit:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, transparent 0 12%, rgba(5, 8, 12, .35) 30%, rgba(5, 8, 12, .9) 80%)
+        }
+
+        .orbit-core {
+            position: absolute;
+            z-index: 3;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #dfff9e, #9bd33f 20%, #15200e 55%, #080d11 75%);
+            color: #071006;
+            font-weight: 900;
+            box-shadow: 0 0 100px rgba(185, 255, 74, .28);
+            animation: core 4s ease-in-out infinite
+        }
+
+        @keyframes core {
+            50% {
+                transform: translate(-50%, -50%) scale(1.05)
+            }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .stat {
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 23px;
+            background: rgba(255, 255, 255, .03)
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--lime);
+            font-size: 3.2rem;
+            letter-spacing: -.07em
+        }
+
+        .stat span {
+            font-size: .76rem;
+            color: #a1acb8
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 11px
+        }
+
+        .step {
+            padding: 25px 20px;
+            min-height: 190px;
+            background: rgba(255, 255, 255, .03);
+            border-top: 2px solid var(--lime);
+            border-radius: 0 0 18px 18px
+        }
+
+        .step b {
+            font-size: .66rem;
+            letter-spacing: .15em;
+            color: var(--lime)
+        }
+
+        .step h3 {
+            margin: 22px 0 9px
+        }
+
+        .faq {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 45px
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 10px
+        }
+
+        .faq-item {
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, .025)
+        }
+
+        .faq-q {
+            width: 100%;
+            border: 0;
+            background: none;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 700
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            transition: .35s
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 150px;
+            padding: 0 20px 18px
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: .88fr 1.12fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .contact-card {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 34px 32px;
+            background: linear-gradient(145deg, #101925, #0a1119);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 11px;
+            margin-top: 20px
+        }
+
+        .contact-list div {
+            padding: 14px 16px;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            background: rgba(8, 14, 21, 0.5);
+            font-size: .88rem;
+        }
+
+        .contact-list small {
+            display: block;
+            color: var(--lime);
+            font-size: .62rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        /* Follow Us Section inside Contact Info Card */
+        .contact-follow-section {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
+        }
+
+        .follow-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .follow-label {
+            font-size: .63rem;
+            letter-spacing: .12em;
+            color: var(--lime);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .follow-subtext {
+            font-size: .72rem;
+            color: var(--muted);
+        }
+
+        .contact-social-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: #d8e5f2;
+            padding: 7px 14px;
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .22s ease;
+        }
+
+        .social-pill-btn:hover {
+            background: var(--lime);
+            border-color: var(--lime);
+            color: #070c12;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(185, 255, 74, 0.3);
+        }
+
+        .contact-follow-toast {
+            font-size: .75rem;
+            color: var(--cyan);
+            margin-top: 8px;
+            min-height: 18px;
+            transition: all .25s ease;
+            font-weight: 500;
+        }
+
+        /* Simplified Studio Production Map */
+        .simple-map-shell {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: linear-gradient(160deg, #0e1520 0%, #070c12 100%);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
+        }
+
+        .simple-map-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            min-height: 440px;
+        }
+
+        .simple-map-frame-box {
+            position: relative;
+            min-height: 400px;
+            background: #070c12;
+            overflow: hidden;
+        }
+
+        .simple-map-frame-box iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            display: block;
+            border: none;
+            filter: invert(90%) hue-rotate(180deg) contrast(1.1) brightness(0.9);
+        }
+
+        .simple-map-floating-badge {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            background: rgba(8, 14, 21, 0.88);
+            border: 1px solid rgba(185, 255, 74, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: .75rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+
+        .simple-map-info-card {
+            padding: 38px 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid var(--line);
+            background: linear-gradient(145deg, rgba(16, 25, 37, 0.85), rgba(10, 16, 24, 0.95));
+        }
+
+        .map-info-header h3 {
+            font-size: 1.45rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .map-info-points {
+            display: grid;
+            gap: 16px;
+            margin: 18px 0;
+        }
+
+        .map-point-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .map-point-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(185, 255, 74, 0.1);
+            border: 1px solid rgba(185, 255, 74, 0.25);
+            color: var(--lime);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .map-point-item strong {
+            display: block;
+            color: #fff;
+            font-size: .88rem;
+            margin-bottom: 3px;
+        }
+
+        .map-point-item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.45;
+        }
+
+        .map-action-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .copy-status {
+            font-size: .76rem;
+            color: var(--lime);
+            min-height: 18px;
+            margin-top: 6px;
+            font-weight: 600;
+            transition: all .25s ease;
+        }
+
+        @media(max-width: 980px) {
+            .simple-map-grid {
+                grid-template-columns: 1fr;
+            }
+            .simple-map-info-card {
+                border-left: none;
+                border-top: 1px solid var(--line);
+                padding: 28px 22px;
+            }
+            .simple-map-frame-box iframe {
+                min-height: 320px;
+            }
+        }
+
+        .formgrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px
+        }
+
+        .field {
+            display: grid;
+            gap: 7px
+        }
+
+        .field.full {
+            grid-column: 1/-1
+        }
+
+        .field label {
+            font-size: .63rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            color: #aeb8c2
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #070c12;
+            color: #f4f7fa;
+            padding: 13px 15px;
+            outline: none;
+            font-size: .88rem;
+            font-family: inherit;
+            transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+
+        .field select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b9ff4a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 38px;
+        }
+
+        .field select option {
+            background: #0d141d;
+            color: #f4f7fa;
+            padding: 10px;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--lime);
+            box-shadow: 0 0 0 2px rgba(185, 255, 74, 0.22);
+            background: #0a1119;
+        }
+
+        .field textarea {
+            min-height: 108px;
+            resize: vertical
+        }
+
+        .form-trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: .75rem;
+            color: #8391a0;
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .form-trust-bar svg {
+            color: var(--lime);
+            flex-shrink: 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: .8s cubic-bezier(.2, .7, .2, 1)
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none
+        }
+
+        /* ==========================================================
+           MODERN SITE FOOTER, NEWSLETTER, SOCIALS & BACK-TO-TOP
+           ========================================================== */
+        footer.site-footer {
+            padding: 72px 0 36px;
+            border-top: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(6, 9, 14, 0.5) 0%, rgba(13, 20, 29, 0.95) 100%);
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-newsletter-card {
+            background: linear-gradient(135deg, rgba(17, 27, 38, 0.88) 0%, rgba(10, 17, 25, 0.96) 100%);
+            border: 1px solid rgba(185, 255, 74, 0.24);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px 46px;
+            margin-bottom: 54px;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-newsletter-card::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(185, 255, 74, 0.12), transparent 70%);
+            pointer-events: none;
+        }
+
+        .footer-newsletter-card::after {
+            content: "";
+            position: absolute;
+            bottom: -70px;
+            left: -40px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(98, 230, 255, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .newsletter-info h3 {
+            font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+            line-height: 1.2;
+            margin: 0 0 10px;
+            color: #fff;
+        }
+
+        .newsletter-info p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .92rem;
+            line-height: 1.55;
+            max-width: 520px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .newsletter-input-box {
+            display: flex;
+            align-items: center;
+            background: rgba(6, 9, 14, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 999px;
+            padding: 6px 6px 6px 20px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
+        }
+
+        .newsletter-input-box:focus-within {
+            border-color: var(--lime);
+            box-shadow: 0 0 0 3px rgba(185, 255, 74, 0.22), inset 0 2px 5px rgba(0, 0, 0, 0.35);
+        }
+
+        .newsletter-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: .92rem;
+            width: 100%;
+            padding: 8px 6px;
+        }
+
+        .newsletter-input::placeholder {
+            color: #728090;
+        }
+
+        .newsletter-btn {
+            white-space: nowrap;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .88rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(185, 255, 74, 0.3);
+        }
+
+        .newsletter-feedback {
+            font-size: .84rem;
+            min-height: 22px;
+            line-height: 1.4;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-feedback.success {
+            color: var(--lime);
+            font-weight: 600;
+        }
+
+        .newsletter-feedback.error {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+
+        .newsletter-note {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .75rem;
+            color: #8493a3;
+            margin: 0;
+        }
+
+        /* Main Footer Grid */
+        .footer-main-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 56px;
+            align-items: start;
+            padding-bottom: 46px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .footer-brand-col {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-desc {
+            font-size: .86rem;
+            line-height: 1.6;
+            color: var(--muted);
+            margin: 0;
+            max-width: 380px;
+        }
+
+        .footer-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .75rem;
+            font-weight: 600;
+            color: #a8b6c4;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            padding: 6px 14px;
+            border-radius: 999px;
+            width: fit-content;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--lime);
+            box-shadow: 0 0 8px var(--lime);
+            display: inline-block;
+        }
+
+        .footer-col-title {
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            color: #fff;
+            margin: 0 0 16px;
+            font-weight: 700;
+        }
+
+        .footer-nav-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 18px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .footer-nav-list a {
+            font-size: .85rem;
+            color: var(--muted);
+            transition: color .2s ease, transform .2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-nav-list a:hover {
+            color: var(--lime);
+            transform: translateX(4px);
+        }
+
+        /* Social Icons Row */
+        .social-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-intro {
+            font-size: .83rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.45;
+        }
+
+        .social-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(17, 27, 38, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #d1dce6;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .25s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+        }
+
+        .social-btn:hover {
+            color: #06090e;
+            background: var(--lime);
+            border-color: var(--lime);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(185, 255, 74, 0.35);
+        }
+
+        .social-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .social-toast {
+            font-size: .78rem;
+            color: var(--cyan);
+            min-height: 20px;
+            transition: all .3s ease;
+            font-weight: 500;
+        }
+
+        /* Bottom Footer Bar: Copyrights, Terms, Conditions */
+        .footer-bottom-bar {
+            padding-top: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .copyright-text {
+            font-size: .79rem;
+            color: #818f9e;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .legal-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .legal-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: .78rem;
+            color: #92a1b1;
+            cursor: pointer;
+            transition: color .2s ease;
+            position: relative;
+        }
+
+        .legal-btn:hover {
+            color: var(--lime);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Floating Back To Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 998;
+            background: rgba(13, 20, 29, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            color: #f4f7fa;
+            border-radius: 999px;
+            padding: 10px 18px 10px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: .82rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(18px);
+            pointer-events: none;
+            transition: opacity .32s ease, transform .32s cubic-bezier(0.2, 0.8, 0.2, 1), visibility .32s, border-color .2s, box-shadow .2s, color .2s;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: rgba(17, 27, 38, 0.96);
+            border-color: var(--lime);
+            color: var(--lime);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 18px rgba(185, 255, 74, 0.28);
+        }
+
+        .back-to-top svg {
+            transition: transform .25s ease;
+        }
+
+        .back-to-top:hover svg {
+            transform: translateY(-2px);
+        }
+
+        /* Interactive Legal Modal (Simple with zero external links) */
+        .legal-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(4, 7, 11, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .28s ease, visibility .28s ease;
+        }
+
+        .legal-modal-backdrop.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .legal-modal-dialog {
+            background: #0d141d;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 22px;
+            width: min(720px, 100%);
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 30px rgba(185, 255, 74, 0.08);
+            padding: 32px;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform .28s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .legal-modal-backdrop.open .legal-modal-dialog {
+            transform: scale(1);
+        }
+
+        .legal-modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .legal-modal-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .legal-modal-close {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #f4f7fa;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all .2s ease;
+            flex-shrink: 0;
+        }
+
+        .legal-modal-close:hover {
+            background: rgba(185, 255, 74, 0.2);
+            color: var(--lime);
+            border-color: var(--lime);
+        }
+
+        .legal-modal-body {
+            color: #c4d1de;
+            font-size: .9rem;
+            line-height: 1.68;
+        }
+
+        .legal-modal-body h4 {
+            color: #fff;
+            margin: 18px 0 6px;
+            font-size: 1.02rem;
+        }
+
+        .legal-modal-body p {
+            margin: 0 0 12px;
+        }
+
+        .legal-modal-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .legal-tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0afbf;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: .8rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all .2s ease;
+        }
+
+        .legal-tab-btn.active,
+        .legal-tab-btn:hover {
+            background: rgba(185, 255, 74, 0.14);
+            border-color: rgba(185, 255, 74, 0.4);
+            color: var(--lime);
+        }
+
+        @media(max-width:980px) {
+            .fixed-bg-header {
+                padding: 10px 0
+            }
+
+            .nav {
+                width: calc(100% - 24px);
+                padding: 8px 14px;
+                border-radius: 18px
+            }
+
+            .links {
+                display: none
+            }
+
+            .links.open {
+                display: flex;
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                right: 0;
+                padding: 20px;
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                background: rgba(8, 12, 18, .98);
+                backdrop-filter: blur(22px);
+                -webkit-backdrop-filter: blur(22px);
+                box-shadow: 0 24px 60px rgba(0, 0, 0, .6);
+                flex-direction: column;
+                gap: 16px;
+                z-index: 1001
+            }
+
+            .links.open a {
+                font-size: .95rem;
+                padding: 10px 14px;
+                border-radius: 12px;
+                border: 1px solid transparent;
+                transition: all .25s ease;
+            }
+
+            .links.open a.active {
+                color: var(--lime);
+                background: rgba(185, 255, 74, .12);
+                border-color: rgba(185, 255, 74, .38);
+                font-weight: 700;
+            }
+
+            .nav-cta {
+                display: none !important;
+            }
+
+            .links.open .mobile-cta {
+                display: inline-flex !important;
+                width: 100%;
+                margin-top: 8px;
+                padding: 14px 20px;
+                justify-content: center;
+                border-radius: 999px;
+                font-weight: 800;
+                background: var(--lime);
+                color: #071008;
+                border-color: var(--lime);
+            }
+
+            .hamb {
+                display: flex;
+                align-items: center;
+                justify-content: center
+            }
+
+            .hero-grid,
+            .contact,
+            .faq,
+            .split {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 118px;
+                padding-bottom: 60px;
+                text-align: center;
+            }
+
+            .hero-grid {
+                gap: 36px;
+                text-align: center;
+            }
+
+            .hero-copy {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin: 0 auto;
+                max-width: 720px;
+                width: 100%;
+            }
+
+            .hero-copy .eyebrow {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero-title {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: clamp(2.8rem, 6.2vw, 4.4rem);
+                line-height: 1.05;
+            }
+
+            .hero-copy p {
+                text-align: center;
+                margin: 20px auto 30px;
+                max-width: 620px;
+                font-size: 1.04rem;
+                line-height: 1.7;
+            }
+
+            .actions {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 14px;
+                width: 100%;
+                margin: 0 auto;
+                flex-wrap: wrap;
+            }
+
+            .actions .btn {
+                min-width: 190px;
+                justify-content: center;
+                text-align: center;
+                padding: 0 24px;
+                font-size: .92rem;
+            }
+
+            .hero-media {
+                height: 440px;
+                width: 100%;
+                max-width: 760px;
+                margin: 0 auto;
+            }
+
+            .hero-img {
+                inset: 0;
+                transform: none !important;
+            }
+
+            .hero-chip {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 22px;
+                width: max-content;
+                max-width: calc(100% - 36px);
+                text-align: center;
+                padding: 13px 20px;
+            }
+
+            .head {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                gap: 14px;
+                margin-bottom: 34px;
+            }
+
+            .head h2 {
+                text-align: center;
+            }
+
+            .head h2:after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .head>p {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 600px;
+                margin-top: 12px;
+            }
+
+            .head .eyebrow {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            .card .body a.btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-top: 14px;
+            }
+
+            .grid4,
+            .stats,
+            .workflow {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .gif-copy {
+                left: 32px;
+                right: 32px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gif-copy .eyebrow,
+            .gif-copy p,
+            .gif-copy .play {
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            .split-copy {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .split-copy .tag {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .faq > .reveal {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 26px;
+            }
+
+            .faq > .reveal .eyebrow,
+            .faq > .reveal p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .faq > .reveal h2:after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .footer-newsletter-card {
+                grid-template-columns: 1fr;
+                gap: 26px;
+                padding: 34px 28px;
+                text-align: center;
+            }
+
+            .newsletter-info p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .newsletter-note {
+                justify-content: center;
+            }
+
+            .footer-main-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                text-align: center;
+            }
+
+            .footer-brand-col {
+                align-items: center;
+            }
+
+            .footer-brand-col .brand {
+                justify-content: center;
+            }
+
+            .footer-desc {
+                text-align: center;
+            }
+
+            .footer-status-badge {
+                margin: 0 auto;
+            }
+
+            .footer-nav-list {
+                justify-content: center;
+            }
+
+            .footer-nav-list a {
+                justify-content: center;
+            }
+
+            .social-box {
+                align-items: center;
+            }
+
+            .social-row {
+                justify-content: center;
+            }
+
+            .footer-bottom-bar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .legal-row {
+                justify-content: center;
+            }
+        }
+
+        @media(max-width:620px) {
+            .wrap {
+                width: calc(100% - 24px)
+            }
+
+            section {
+                padding: 52px 0
+            }
+
+            .hero {
+                padding-top: 106px;
+                padding-bottom: 44px;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: clamp(2.3rem, 9.2vw, 3.2rem);
+                line-height: 1.08;
+                letter-spacing: -.03em;
+            }
+
+            .hero-copy p {
+                font-size: .94rem;
+                line-height: 1.62;
+                margin: 18px auto 26px;
+                max-width: 100%;
+            }
+
+            .actions {
+                flex-direction: column;
+                width: 100%;
+                max-width: 380px;
+                margin: 0 auto;
+                gap: 12px;
+            }
+
+            .actions .btn {
+                width: 100%;
+                min-height: 52px;
+                font-size: .95rem;
+                font-weight: 700;
+                padding: 0 20px;
+                justify-content: center;
+                text-align: center;
+                border-radius: 999px;
+                box-sizing: border-box;
+            }
+
+            .hero-media {
+                height: 330px;
+                margin-top: 10px;
+            }
+
+            .hero-img {
+                inset: 0;
+            }
+
+            .hero-chip {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 12px;
+                padding: 11px 16px;
+                border-radius: 14px;
+                width: calc(100% - 24px);
+                max-width: 300px;
+                text-align: center;
+                animation: none;
+            }
+
+            .hero-chip b {
+                font-size: .80rem;
+            }
+
+            .hero-chip span {
+                font-size: .68rem;
+            }
+
+            .head {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                margin-bottom: 28px;
+            }
+
+            .head>p {
+                margin-top: 12px;
+                text-align: center;
+            }
+
+            .head h2:after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .card .body {
+                padding: 20px 18px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card .body h3 {
+                text-align: center;
+                font-size: 1.2rem;
+            }
+
+            .card .body p {
+                text-align: center;
+                font-size: .85rem;
+            }
+
+            .card .body .tag {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .card .body a.btn {
+                width: 100%;
+                min-height: 48px;
+                margin-top: 14px;
+                font-size: .88rem;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .grid3,
+            .grid4,
+            .stats,
+            .workflow,
+            .formgrid {
+                grid-template-columns: 1fr
+            }
+
+            .field.full {
+                grid-column: auto
+            }
+
+            .formgrid .field.full .btn {
+                width: 100%;
+                min-height: 52px;
+                font-size: .95rem;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .gif-stage {
+                height: 320px
+            }
+
+            .gif-copy {
+                left: 18px;
+                right: 18px;
+                text-align: center;
+            }
+
+            .gif-copy h2 {
+                font-size: 2.3rem;
+                line-height: 1.1;
+            }
+
+            .orbit {
+                height: 280px
+            }
+
+            .orbit-core {
+                width: 105px;
+                height: 105px;
+                font-size: .68rem
+            }
+
+            .footer-newsletter-card {
+                padding: 24px 18px;
+                border-radius: 18px;
+            }
+
+            .newsletter-input-box {
+                flex-direction: column;
+                border-radius: 16px;
+                padding: 10px;
+                gap: 8px;
+            }
+
+            .newsletter-input {
+                text-align: center;
+                padding: 6px;
+            }
+
+            .newsletter-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .footer-nav-list {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .legal-row {
+                gap: 8px 12px;
+                font-size: .74rem;
+            }
+
+            .back-to-top {
+                bottom: 18px;
+                right: 18px;
+                padding: 10px 14px;
+            }
+
+            .back-to-top-label {
+                display: none;
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .001ms !important
+            }
+        }
+
+        .visual-badge {
+            position: absolute;
+            z-index: 4;
+            right: 18px;
+            top: 18px;
+            padding: 8px 11px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 999px;
+            background: rgba(4, 7, 11, .48);
+            backdrop-filter: blur(12px);
+            font-size: .62rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #eaf2f8
+        }
+
+        .visual-badge:before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--lime);
+            margin-right: 7px;
+            box-shadow: 0 0 12px var(--lime)
+        }
+
+        .sub-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--line), transparent);
+            margin: 56px 0 46px;
+        }
+
+        .subsection {
+            position: relative;
+        }
+    </style>
+</head>
+
 <body>
-<nav class="nav"><a class="brand" href="#home"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 48 48" role="img"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b9ff4a"/><stop offset="1" stop-color="#62e6ff"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="14" fill="#0a1119" stroke="url(#lg)" stroke-width="1.5"/><path d="M15 17h18v4H19v4h11v4H19v7h-4V17Z" fill="url(#lg)"/><circle cx="34" cy="31" r="5.2" fill="none" stroke="#fff" stroke-width="2"/><path d="M31.3 31h5.4M34 28.3v5.4" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg></span><span class="brand-word">FRAME<span>FORGE</span><b>.</b></span></a><div class="links"><a href="#library">Library</a><a href="#learn">Learn</a><a href="#templates">Templates</a><a href="#motion">Motion</a><a href="#community">Community</a><a href="#contact">Contact</a></div><a class="btn primary" href="#contact">Join network</a><button class="hamb" id="hamb">☰</button></nav>
+    <header class="fixed-bg-header" id="headerBg">
+        <nav class="nav" aria-label="Main Navigation"><a class="brand" href="#home" aria-label="FrameForge Home"><span
+                    class="logo-mark" aria-hidden="true"><svg viewBox="0 0 48 48" role="img">
+                        <defs>
+                            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+                                <stop stop-color="#b9ff4a" />
+                                <stop offset="1" stop-color="#62e6ff" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="2" y="2" width="44" height="44" rx="14" fill="#0a1119" stroke="url(#lg)"
+                            stroke-width="1.5" />
+                        <path d="M15 17h18v4H19v4h11v4H19v7h-4V17Z" fill="url(#lg)" />
+                        <circle cx="34" cy="31" r="5.2" fill="none" stroke="#fff" stroke-width="2" />
+                        <path d="M31.3 31h5.4M34 28.3v5.4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                    </svg></span><span class="brand-word">FRAME<span>FORGE</span><b>.</b></span></a>
+            <div class="links" id="navLinks"><a href="#home" class="active">Home</a><a href="#library">Library</a><a
+                    href="#learn">Learn</a><a href="#templates">Templates</a><a href="#motion">Motion</a><a
+                    href="#community">Community</a><a href="#contact">Contact</a><a class="btn primary mobile-cta"
+                    href="#contact">Join network</a></div><a class="btn primary nav-cta"
+                href="#contact">Join network</a><button class="hamb" id="hamb" aria-label="Toggle navigation menu"
+                aria-expanded="false">☰</button>
+        </nav>
+    </header>
 
-<main id="home">
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy reveal"><div class="eyebrow">Photography / Video / Knowledge</div><h1 class="hero-title"><span class="shine-line">Make the frame.</span><br><span class="shine-line accent">Tell the story.</span><i class="title-spark s1"></i><i class="title-spark s2"></i></h1><p>A visual-first knowledge network for photographers and filmmakers — real production references, animated learning experiences, practical templates and creator workflows.</p><div class="actions"><a class="btn primary" href="#library">Explore library →</a><a class="btn" href="#motion">See motion work</a></div></div><div class="hero-media reveal" id="tilt"><div class="orb"></div><div class="orb two"></div><div class="hero-img"><img src="https://images.pexels.com/photos/31086908/pexels-photo-31086908.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Professional camera outdoors"></div><div class="hero-chip"><b>Visual knowledge, built beautifully.</b><span>Capture • Edit • Share</span></div></div></div></section>
-<div class="ticker"><div class="ticker-track"><span>CAMERA CRAFT <i>✦</i></span><span>LIGHTING <i>✦</i></span><span>CINEMATOGRAPHY <i>✦</i></span><span>EDITING <i>✦</i></span><span>VISUAL STORYTELLING <i>✦</i></span><span>CAMERA CRAFT <i>✦</i></span><span>LIGHTING <i>✦</i></span><span>CINEMATOGRAPHY <i>✦</i></span></div></div>
+    <main>
+        <!-- ========================================================
+             MENU SECTION 01: HOME
+             Subsection 1: Hero Experience
+             Subsection 2: Platform Architecture & Core Pillars
+             ======================================================== -->
+        <section id="home" class="hero" style="min-height:auto">
+            <div class="wrap">
+                <div class="subsection">
+                    <div class="hero-grid">
+                        <div class="hero-copy reveal">
+                            <div class="eyebrow">Home • Subsection 01 / Hero Experience</div>
+                            <h1 class="hero-title"><span class="shine-line">Make the frame.</span><br><span
+                                    class="shine-line accent">Tell the story.</span><i class="title-spark s1"></i><i
+                                    class="title-spark s2"></i></h1>
+                            <p>A visual-first knowledge network for photographers and filmmakers — real production references,
+                                animated learning experiences, practical templates and creator workflows.</p>
+                            <div class="actions"><a class="btn primary" href="#library">Explore library →</a><a class="btn"
+                                    href="#motion">See motion work</a></div>
+                        </div>
+                        <div class="hero-media reveal" id="tilt">
+                            <div class="orb"></div>
+                            <div class="orb two"></div>
+                            <div class="hero-img"><img
+                                    src="https://images.pexels.com/photos/31086908/pexels-photo-31086908.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Professional camera outdoors"></div>
+                            <div class="hero-chip"><b>Visual knowledge, built beautifully.</b><span>Capture • Edit • Share</span></div>
+                        </div>
+                    </div>
+                </div>
 
-<section id="library"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">01 / Resource library</div><h2>Real references. Cleanly organised.</h2></div><p>Every topic is designed around practical creator decisions — not generic filler.</p></div><div class="grid3">
-<article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/5314217/pexels-photo-5314217.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Camera movement"></div><div class="body"><span class="tag">Camera craft</span><h3 style="margin-top:13px">Camera movement</h3><p>Understand framing, motion and camera placement through real production examples.</p><a class="btn" href="#contact">View lesson →</a></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/3062553/pexels-photo-3062553.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Production setup"></div><div class="body"><span class="tag">Production</span><h3 style="margin-top:13px">Production setup</h3><p>Build practical shoot systems around gear, crew, location and visual intent.</p><a class="btn" href="#contact">See templates →</a></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/4553360/pexels-photo-4553360.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Shoot with intention"></div><div class="body"><span class="tag">Field craft</span><h3 style="margin-top:13px">Shoot with intention</h3><p>Use light, perspective and movement to create stronger visual storytelling.</p><a class="btn" href="#contact">Start learning →</a></div></article>
-</div></div></section>
+                <div class="sub-divider"></div>
 
-<section class="dark" id="motion"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">02 / Visual technique</div><h2>See the technique in practice.</h2></div><p>Real production imagery and subtle cinematic motion make the technique easier to understand.</p></div><div class="gif-stage reveal"><span class="visual-badge">Camera craft</span><img src="https://images.pexels.com/photos/3062553/pexels-photo-3062553.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Professional camera and production setup"><div class="gif-copy"><div class="eyebrow">Camera / focus / exposure</div><h2 class="motion-title">Good images begin with control.</h2><p>Explore how focus, exposure and depth interact before you ever touch the edit.</p><div class="play" aria-hidden="true">✦</div></div></div></div></section>
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Home • Subsection 02 / Core Architecture</div>
+                            <h2>Built for creators who demand craft.</h2>
+                        </div>
+                        <p>Three foundational pillars designed to eliminate guesswork and elevate visual production quality on set.</p>
+                    </div>
+                    <div class="grid3">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/3062553/pexels-photo-3062553.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Production references"></div>
+                            <div class="body"><span class="tag">Pillar 01</span>
+                                <h3 style="margin-top:13px">Reference Network</h3>
+                                <p>Real production setups, lighting plots, and framing methodologies catalogued from working shoots.</p>
+                                <a class="btn" href="#library">Explore library →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/26832949/pexels-photo-26832949.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Kinetic motion studies"></div>
+                            <div class="body"><span class="tag">Pillar 02</span>
+                                <h3 style="margin-top:13px">Visual Mechanics</h3>
+                                <p>Interactive cinematography studies breaking down camera velocity, focal arcs, and lighting contrast.</p>
+                                <a class="btn" href="#motion">View motion studies →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/5314217/pexels-photo-5314217.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Field toolkits"></div>
+                            <div class="body"><span class="tag">Pillar 03</span>
+                                <h3 style="margin-top:13px">Field Toolkits</h3>
+                                <p>Turnkey pre-production command sheets, gear checklists, and delivery specification matrices.</p>
+                                <a class="btn" href="#templates">Get templates →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="learn"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">03 / Learning paths</div><h2>Real images. Real production.</h2></div><p>Fresh photography replaces the old broken-image set.</p></div><div class="grid4"><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/3796987/pexels-photo-3796987.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Build the shot"></div><div class="body"><span class="tag">12 min</span><h3 style="margin-top:11px">Build the shot</h3><p>Plan composition before you press record.</p></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/17159211/pexels-photo-17159211.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Work the location"></div><div class="body"><span class="tag">09 min</span><h3 style="margin-top:11px">Work the location</h3><p>Turn location constraints into visual opportunities.</p></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/14933978/pexels-photo-14933978.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Direct the frame"></div><div class="body"><span class="tag">15 min</span><h3 style="margin-top:11px">Direct the frame</h3><p>Control subject, lens and background relationships.</p></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/26832949/pexels-photo-26832949.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Move with purpose"></div><div class="body"><span class="tag">11 min</span><h3 style="margin-top:11px">Move with purpose</h3><p>Use stabilised motion without losing visual intent.</p></div></article></div></div></section>
+        <div class="ticker">
+            <div class="ticker-track"><span>CAMERA CRAFT <i>✦</i></span><span>LIGHTING
+                    <i>✦</i></span><span>CINEMATOGRAPHY <i>✦</i></span><span>EDITING <i>✦</i></span><span>VISUAL
+                    STORYTELLING <i>✦</i></span><span>CAMERA CRAFT <i>✦</i></span><span>LIGHTING
+                    <i>✦</i></span><span>CINEMATOGRAPHY <i>✦</i></span></div>
+        </div>
 
-<section class="dark"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">04 / Camera movement</div><h2>Motion should feel intentional.</h2></div><p>Study real gimbal production and use controlled movement to guide the viewer through a scene.</p></div><div class="gif-stage reveal"><span class="visual-badge">Camera movement</span><img src="https://images.pexels.com/photos/26832949/pexels-photo-26832949.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Filmmaker using a gimbal camera for controlled movement"><div class="gif-copy"><div class="eyebrow">Motion / cut / story</div><h2 class="motion-title">Move the camera.<br><span style="color:var(--cyan)">Move the story.</span></h2><p>Learn tracking, arcs, transitions and camera movement through visual breakdowns.</p><div class="play" aria-hidden="true">✦</div></div></div></div></section>
+        <!-- ========================================================
+             MENU SECTION 02: LIBRARY
+             Subsection 1: Curated Production References
+             Subsection 2: Formats, Optics & Color Standards
+             ======================================================== -->
+        <section id="library">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Library • Subsection 01 / Curated References</div>
+                            <h2>Real references. Cleanly organised.</h2>
+                        </div>
+                        <p>Every topic is designed around practical creator decisions — not generic filler.</p>
+                    </div>
+                    <div class="grid3">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Camera slider and tracking rails on set"></div>
+                            <div class="body">
+                                <span class="tag">Camera craft</span>
+                                <h3>Camera movement</h3>
+                                <p>Understand framing, motion and camera placement through real production examples.</p>
+                                <a class="btn" href="#contact">View lesson →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Production filming crew with camera setup"></div>
+                            <div class="body">
+                                <span class="tag">Production</span>
+                                <h3>Production setup</h3>
+                                <p>Build practical shoot systems around gear, crew, location and visual intent.</p>
+                                <a class="btn" href="#contact">See templates →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/4553360/pexels-photo-4553360.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Shoot with intention"></div>
+                            <div class="body">
+                                <span class="tag">Field craft</span>
+                                <h3>Shoot with intention</h3>
+                                <p>Use light, perspective and movement to create stronger visual storytelling.</p>
+                                <a class="btn" href="#contact">Start learning →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-<section id="templates"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">05 / Production templates</div><h2>Prepare once. Shoot better.</h2></div><p>Compact tools for planning shoots, gear, locations and post-production.</p></div><div class="grid3"><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/3062553/pexels-photo-3062553.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Pre-shoot command sheet"></div><div class="body"><span class="tag">Checklist</span><h3 style="margin-top:13px">Pre-shoot command sheet</h3><p>Gear, media, batteries, location and creative priorities.</p><a class="btn" href="#contact">Get template →</a></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/26832949/pexels-photo-26832949.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Movement planner"></div><div class="body"><span class="tag">Planning</span><h3 style="margin-top:13px">Movement planner</h3><p>Plan tracking shots, reveals, arcs and transitions.</p><a class="btn" href="#contact">Get template →</a></div></article><article class="card reveal"><div class="photo"><img src="https://images.pexels.com/photos/5314217/pexels-photo-5314217.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Shot list builder"></div><div class="body"><span class="tag">Production</span><h3 style="margin-top:13px">Shot list builder</h3><p>Turn the creative idea into an organised production sequence.</p><a class="btn" href="#contact">Get template →</a></div></article></div></div></section>
+                <div class="sub-divider"></div>
 
-<section class="dark"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">06 / Lighting technique</div><h2>Shape the light, shape the mood.</h2></div><p>Lighting is not decoration — it is part of the story.</p></div><div class="gif-stage reveal"><span class="visual-badge">Lighting</span><img src="https://images.pexels.com/photos/4553360/pexels-photo-4553360.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Videographer working with a professional camera in natural light"><div class="gif-copy"><div class="eyebrow">Direction / contrast / atmosphere</div><h2 class="motion-title">Light tells the viewer where to look.</h2><p>Study direction, contrast and atmosphere through a visual learning experience.</p></div></div></div></section>
+                <!-- Subsection 2 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Library • Subsection 02 / Technical Standards</div>
+                            <h2>Formats, Optics & Color Standards.</h2>
+                        </div>
+                        <p>Essential camera sensor math, anamorphic squeeze factors, and dynamic range preservation protocols.</p>
+                    </div>
+                    <div class="grid3">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/14933978/pexels-photo-14933978.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Sensor and optics guide"></div>
+                            <div class="body">
+                                <span class="tag">Optics</span>
+                                <h3>Sensor & Focal Crop Matrix</h3>
+                                <p>Full-Frame vs Super 35 crop calculations, field of view shifts, and depth of field equivalence.</p>
+                                <a class="btn" href="#contact">View directive →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/3796987/pexels-photo-3796987.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Color science and curves"></div>
+                            <div class="body">
+                                <span class="tag">Color Science</span>
+                                <h3>Log Curves & Dynamic Range</h3>
+                                <p>Middle-grey exposure targets for ARRI LogC, Sony S-Log3, RED IPP2, and Canon Log.</p>
+                                <a class="btn" href="#contact">View directive →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/17159211/pexels-photo-17159211.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Audio telemetry"></div>
+                            <div class="body">
+                                <span class="tag">Audio</span>
+                                <h3>Acoustics & 32-bit Float</h3>
+                                <p>Clean dialogue capture, clipping immunity, lavalier placement acoustics, and ambient stereo.</p>
+                                <a class="btn" href="#contact">View directive →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section><div class="wrap"><div class="head reveal"><div><div class="eyebrow">07 / Technique archive</div><h2>Small technique. Bigger control.</h2></div><p>Focused areas to keep the knowledge practical and easy to scan.</p></div><div class="split"><article class="split-card reveal"><img src="https://images.pexels.com/photos/3796987/pexels-photo-3796987.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Outdoor filming"><div class="split-copy"><span class="tag">Field</span><h3 style="margin-top:10px">Location storytelling</h3><p>Use environment, timing and perspective to give the frame context.</p></div></article><article class="split-card reveal"><img src="https://images.pexels.com/photos/17159211/pexels-photo-17159211.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Photography at beach"><div class="split-copy"><span class="tag">Photography</span><h3 style="margin-top:10px">Find the decisive frame</h3><p>Wait for the moment where subject, light and composition align.</p></div></article></div></div></section>
+        <!-- ========================================================
+             MENU SECTION 03: LEARN
+             Subsection 1: Masterclass Learning Paths
+             Subsection 2: Field Studies & Core Principles
+             ======================================================== -->
+        <section id="learn" class="dark">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Learn • Subsection 01 / Learning Paths</div>
+                            <h2>Real images. Real production.</h2>
+                        </div>
+                        <p>Structured video masterclasses designed around decisions made in high-stakes production environments.</p>
+                    </div>
+                    <div class="grid4">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/8100784/pexels-photo-8100784.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Director framing shot through viewfinder"></div>
+                            <div class="body"><span class="tag">12 min</span>
+                                <h3 style="margin-top:11px">Build the shot</h3>
+                                <p>Plan composition before you press record.</p>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Camera operator working location constraints"></div>
+                            <div class="body"><span class="tag">09 min</span>
+                                <h3 style="margin-top:11px">Work the location</h3>
+                                <p>Turn location constraints into visual opportunities.</p>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Studio portrait lighting and model directing"></div>
+                            <div class="body"><span class="tag">15 min</span>
+                                <h3 style="margin-top:11px">Direct the frame</h3>
+                                <p>Control subject, lens and background relationships.</p>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/7140508/pexels-photo-7140508.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Gimbal stabilizer for smooth camera motion"></div>
+                            <div class="body"><span class="tag">11 min</span>
+                                <h3 style="margin-top:11px">Move with purpose</h3>
+                                <p>Use stabilised motion without losing visual intent.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-<section class="dark"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">08 / Production knowledge</div><h2>Connect the craft behind the frame.</h2></div><p>Follow the production chain from camera setup to movement, lighting and final storytelling.</p></div><div class="orbit reveal"><span class="visual-badge">Production workflow</span><img src="https://images.pexels.com/photos/5314217/pexels-photo-5314217.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Filmmaker operating a professional video camera"><div class="orbit-core">DISCOVER<br>LEARN<br>CREATE</div></div></div></section>
+                <div class="sub-divider"></div>
 
-<section><div class="wrap"><div class="head reveal"><div><div class="eyebrow">09 / Network metrics</div><h2>A library designed to scale.</h2></div><p>Clear information architecture lets a growing resource collection stay easy to navigate.</p></div><div class="stats"><div class="stat reveal"><strong data-n="1200">0</strong><span>Knowledge references</span></div><div class="stat reveal"><strong data-n="340">0</strong><span>Video lessons</span></div><div class="stat reveal"><strong data-n="180">0</strong><span>Production templates</span></div><div class="stat reveal"><strong data-n="24">0</strong><span>Creative disciplines</span></div></div></div></section>
+                <!-- Subsection 2 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Learn • Subsection 02 / Field Studies & Principles</div>
+                            <h2>Technique archive & field principles.</h2>
+                        </div>
+                        <p>Detailed breakdowns and three immutable principles worth carrying into your next shoot.</p>
+                    </div>
+                    <div class="split">
+                        <article class="split-card reveal"><img
+                                src="https://images.pexels.com/photos/2065820/pexels-photo-2065820.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                alt="Landscape filmmaking on tripod during golden hour">
+                            <div class="split-copy"><span class="tag">Field Study</span>
+                                <h3 style="margin-top:10px">Location storytelling</h3>
+                                <p>Use environment, timing and perspective to give the frame context.</p>
+                            </div>
+                        </article>
+                        <article class="split-card reveal"><img
+                                src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                alt="Street photographer capturing decisive moment">
+                            <div class="split-copy"><span class="tag">Photography Study</span>
+                                <h3 style="margin-top:10px">Find the decisive frame</h3>
+                                <p>Wait for the moment where subject, light and composition align.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="grid3" style="margin-top:20px">
+                        <article class="card reveal">
+                            <div class="body"><span class="tag">Exposure</span>
+                                <h3 style="margin-top:15px">Protect what matters.</h3>
+                                <p>Retain important highlight detail in camera and sculpt shadows later in grade.</p>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="body"><span class="tag">Composition</span>
+                                <h3 style="margin-top:15px">Leave visual direction.</h3>
+                                <p>Give subjects and camera movement enough lead space and breathing room.</p>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="body"><span class="tag">Video</span>
+                                <h3 style="margin-top:15px">Sound completes the image.</h3>
+                                <p>Clean dialogue and purposeful acoustic ambience transform perceived quality.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="community" class="dark"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">10 / Community</div><h2>Creators learn faster together.</h2></div><p>Ask practical questions, exchange workflows and share the lessons that actually helped on a shoot.</p></div><div class="split"><article class="split-card reveal"><img src="https://images.pexels.com/photos/14933978/pexels-photo-14933978.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Professional camera operator"><div class="split-copy"><span class="tag">Discussion</span><h3 style="margin-top:10px">What are you trying to solve?</h3><p>Start with the real production problem. The community starts there too.</p></div></article><article class="split-card reveal"><img src="https://images.pexels.com/photos/26832949/pexels-photo-26832949.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Gimbal filmmaker"><div class="split-copy"><span class="tag">Workflow</span><h3 style="margin-top:10px">Share the process, not just the result.</h3><p>Useful knowledge lives in the decisions behind the finished frame.</p></div></article></div></div></section>
+        <!-- ========================================================
+             MENU SECTION 04: TEMPLATES
+             Subsection 1: Pre-Production Command Sheets
+             Subsection 2: Post-Production & Delivery Systems
+             ======================================================== -->
+        <section id="templates">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Templates • Subsection 01 / Production Toolkits</div>
+                            <h2>Prepare once. Shoot better.</h2>
+                        </div>
+                        <p>Compact, battle-tested tools for planning shoots, camera gear, locations and filming sequences.</p>
+                    </div>
+                    <div class="grid3">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Film production clapperboard slate"></div>
+                            <div class="body">
+                                <span class="tag">Checklist</span>
+                                <h3>Pre-shoot command sheet</h3>
+                                <p>Gear, media, batteries, location risk assessment and creative priorities.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/2388569/pexels-photo-2388569.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Visual storyboard sketches and camera blocking"></div>
+                            <div class="body">
+                                <span class="tag">Planning</span>
+                                <h3>Movement planner</h3>
+                                <p>Plan tracking shots, reveals, rotational arcs and camera transitions.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Camera gear kit flatlay organized for shoot"></div>
+                            <div class="body">
+                                <span class="tag">Production</span>
+                                <h3>Shot list builder</h3>
+                                <p>Turn the creative idea into an organised, time-blocked production sequence.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-<section><div class="wrap"><div class="head reveal"><div><div class="eyebrow">11 / Creator workflow</div><h2>From idea to finished frame.</h2></div><p>A simple five-step rhythm for repeatable creative work.</p></div><div class="workflow"><div class="step reveal"><b>01 / DISCOVER</b><h3>Find the reference.</h3><p>Search the library and collect useful examples.</p></div><div class="step reveal"><b>02 / PLAN</b><h3>Build the setup.</h3><p>Prepare people, gear, location and visual priorities.</p></div><div class="step reveal"><b>03 / CAPTURE</b><h3>Make the frame.</h3><p>Apply technique, light and movement intentionally.</p></div><div class="step reveal"><b>04 / REFINE</b><h3>Shape the story.</h3><p>Edit, grade, sequence and polish the work.</p></div><div class="step reveal"><b>05 / SHARE</b><h3>Return the lesson.</h3><p>Share what worked so another creator moves faster.</p></div></div></div></section>
+                <div class="sub-divider"></div>
 
-<section class="dark"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">12 / Field notes</div><h2>Three principles worth saving.</h2></div><p>Short references you can carry into your next shoot.</p></div><div class="grid3"><article class="card reveal"><div class="body"><span class="tag">Exposure</span><h3 style="margin-top:15px">Protect what matters.</h3><p>Retain important highlight detail and shape shadows later.</p></div></article><article class="card reveal"><div class="body"><span class="tag">Composition</span><h3 style="margin-top:15px">Leave visual direction.</h3><p>Give subjects and movement enough space to breathe.</p></div></article><article class="card reveal"><div class="body"><span class="tag">Video</span><h3 style="margin-top:15px">Sound completes the image.</h3><p>Clean dialogue and purposeful ambience transform perceived quality.</p></div></article></div></div></section>
+                <!-- Subsection 2 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Templates • Subsection 02 / Post & Delivery</div>
+                            <h2>Standardized Post-Production Blueprints.</h2>
+                        </div>
+                        <p>Eliminate delivery surprises with turnkey color transformation matrices, checksum offload sheets, and master delivery specs.</p>
+                    </div>
+                    <div class="grid3">
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/2773498/pexels-photo-2773498.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="DaVinci Resolve color grading suite with control surface"></div>
+                            <div class="body">
+                                <span class="tag">Color Pipeline</span>
+                                <h3>Color Pipeline & Show LUTs</h3>
+                                <p>Rec.709 normalization tables, ACES color management sheets, and show LUT presets.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="DIT workstation with Mac and high-speed RAID drives"></div>
+                            <div class="body">
+                                <span class="tag">DIT Protocol</span>
+                                <h3>Data Ingest & Checksums</h3>
+                                <p>Dual-drive offload verification logs, MD5/xxHash checksum protocols, and directory rules.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                        <article class="card reveal">
+                            <div class="photo"><img
+                                    src="https://images.pexels.com/photos/1983037/pexels-photo-1983037.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                    alt="Master video editing dual monitor workstation"></div>
+                            <div class="body">
+                                <span class="tag">Delivery</span>
+                                <h3>Master Delivery Spec Sheet</h3>
+                                <p>ProRes 422HQ/4444 standards, audio loudness (-14 LUFS online / -23 LUFS broadcast), and aspect ratios.</p>
+                                <a class="btn" href="#contact">Get template →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section><div class="wrap faq"><div class="reveal"><div class="eyebrow">13 / FAQ</div><h2>Clear answers.<br>No clutter.</h2><p style="margin-top:17px">The content stays focused on photography, video and useful creator knowledge.</p></div><div class="faq-list reveal"><div class="faq-item open"><button class="faq-q">What is FrameForge? <span>+</span></button><div class="faq-a"><p>A photography and video resource network combining real visual references, tutorials, production templates and creator discussion.</p></div></div><div class="faq-item"><button class="faq-q">How are the visual sections animated? <span>+</span></button><div class="faq-a"><p>They use real photography with lightweight CSS camera drift, light sweeps and depth effects, keeping the visuals relevant to the subject.</p></div></div><div class="faq-item"><button class="faq-q">Are the photos external? <span>+</span></button><div class="faq-a"><p>The photographic cards use direct Pexels CDN image URLs selected for photography and video production subjects.</p></div></div></div></div></section>
+        <!-- ========================================================
+             MENU SECTION 05: MOTION
+             Subsection 1: Visual Technique & Focus Control
+             Subsection 2: Gimbal Dynamics & Camera Movement
+             Subsection 3: Dynamic Lighting & Creative Orbit
+             ======================================================== -->
+        <section id="motion" class="dark">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Motion • Subsection 01 / Visual Technique</div>
+                            <h2>Good images begin with control.</h2>
+                        </div>
+                        <p>Real production imagery and subtle cinematic motion make the technique easier to understand.</p>
+                    </div>
+                    <div class="gif-stage reveal"><span class="visual-badge">Camera craft</span><img
+                            src="https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                            alt="Cinema prime lens optical focus ring macro">
+                        <div class="gif-copy">
+                            <div class="eyebrow">Camera / focus / exposure</div>
+                            <h2 class="motion-title">Good images begin with control.</h2>
+                            <p>Explore how focus, exposure and depth interact before you ever touch the edit.</p>
+                            <div class="play" aria-hidden="true">✦</div>
+                        </div>
+                    </div>
+                </div>
 
-<section id="contact"><div class="wrap"><div class="head reveal"><div><div class="eyebrow">14 / Contact</div><h2>Bring your next creative question.</h2></div><p>Demo contact information is intentionally fictional and ready to be replaced.</p></div><div class="contact"><div class="contact-card reveal"><h3>Creative Resource Network</h3><p style="margin-top:9px">Demo contact details.</p><div class="contact-list"><div><small>Email</small>hello@frameforge.example</div><div><small>Phone</small>+91 90000 12345</div><div><small>Address</small>Creative Media Hub, Hyderabad, Telangana, India</div></div><div class="map"><div><b>MAP AREA</b><br><span style="font-size:.72rem;color:#9da8b4">Replace with your preferred map embed.</span></div></div></div><form class="contact-card reveal" id="form"><div class="formgrid"><div class="field"><label>YOUR NAME</label><input required placeholder="Your name"></div><div class="field"><label>EMAIL</label><input required type="email" placeholder="you@example.com"></div><div class="field full"><label>SUBJECT</label><input required placeholder="How can we help?"></div><div class="field full"><label>MESSAGE</label><textarea required placeholder="Tell us about your project..."></textarea></div><div class="field full"><button class="btn primary" type="submit">Send message →</button></div></div></form></div></div></section>
-</main>
-<footer><div class="wrap foot"><a class="brand" href="#home"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 48 48" role="img"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b9ff4a"/><stop offset="1" stop-color="#62e6ff"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="14" fill="#0a1119" stroke="url(#lg)" stroke-width="1.5"/><path d="M15 17h18v4H19v4h11v4H19v7h-4V17Z" fill="url(#lg)"/><circle cx="34" cy="31" r="5.2" fill="none" stroke="#fff" stroke-width="2"/><path d="M31.3 31h5.4M34 28.3v5.4" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg></span><span class="brand-word">FRAME<span>FORGE</span><b>.</b></span></a><p>Photography & Video Resource Network</p><div class="footlinks"><a href="#library">Library</a><a href="#learn">Learn</a><a href="#community">Community</a><a href="#contact">Contact</a></div></div></footer>
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-document.querySelectorAll('[data-n]').forEach(el=>{const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const target=+el.dataset.n;let n=0;const step=Math.max(1,Math.ceil(target/55));const run=()=>{n=Math.min(target,n+step);el.textContent=n.toLocaleString();if(n<target)requestAnimationFrame(run)};run();o.disconnect()}}),{threshold:.7});o.observe(el)});
-document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
-const hero=document.getElementById('tilt');hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.querySelector('.hero-img').style.transform=`rotateY(${x*-12}deg) rotateX(${y*7}deg) rotateZ(1deg)`});hero.addEventListener('pointerleave',()=>hero.querySelector('.hero-img').style.transform='rotateY(-7deg) rotateZ(1deg)');
-document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();alert('Thank you! This demo form is ready to connect to your backend or email service.')});
-document.getElementById('hamb').addEventListener('click',()=>{const l=document.querySelector('.links');const open=l.dataset.open==='1';l.dataset.open=open?'0':'1';l.style.display=open?'none':'flex';l.style.position='absolute';l.style.top='65px';l.style.left='0';l.style.right='0';l.style.padding='18px';l.style.border='1px solid var(--line)';l.style.borderRadius='18px';l.style.background='rgba(6,9,14,.98)';l.style.flexDirection='column'});
-</script></body></html>
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 2 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Motion • Subsection 02 / Camera Movement</div>
+                            <h2>Motion should feel intentional.</h2>
+                        </div>
+                        <p>Study real gimbal production and use controlled movement to guide the viewer through a scene.</p>
+                    </div>
+                    <div class="gif-stage reveal"><span class="visual-badge">Camera movement</span><img
+                            src="https://images.pexels.com/photos/3379943/pexels-photo-3379943.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                            alt="Steadicam operator executing dynamic tracking shot">
+                        <div class="gif-copy">
+                            <div class="eyebrow">Motion / cut / story</div>
+                            <h2 class="motion-title">Move the camera.<br><span style="color:var(--cyan)">Move the
+                                    story.</span></h2>
+                            <p>Learn tracking, arcs, transitions and camera movement through visual breakdowns.</p>
+                            <div class="play" aria-hidden="true">✦</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 3 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Motion • Subsection 03 / Atmosphere & Orbit</div>
+                            <h2>Shape the light. Connect the craft.</h2>
+                        </div>
+                        <p>Lighting is not decoration — it is the emotional language of the shot.</p>
+                    </div>
+                    <div class="gif-stage reveal"><span class="visual-badge">Lighting</span><img
+                            src="https://images.pexels.com/photos/827209/pexels-photo-827209.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                            alt="Atmospheric neon tube lighting and haze in studio">
+                        <div class="gif-copy">
+                            <div class="eyebrow">Direction / contrast / atmosphere</div>
+                            <h2 class="motion-title">Light tells the viewer where to look.</h2>
+                            <p>Study direction, contrast and atmosphere through a visual learning experience.</p>
+                        </div>
+                    </div>
+                    <div class="orbit reveal" style="margin-top:20px"><span class="visual-badge">Production workflow</span><img
+                            src="https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                            alt="Broadcast studio control room and multi-monitor console">
+                        <div class="orbit-core">DISCOVER<br>LEARN<br>CREATE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             MENU SECTION 06: COMMUNITY
+             Subsection 1: Peer Problem Solving & Exchange
+             Subsection 2: The 5-Step Creator Workflow
+             Subsection 3: Network Scale & Live Metrics
+             ======================================================== -->
+        <section id="community">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Community • Subsection 01 / Creator Exchange</div>
+                            <h2>Creators learn faster together.</h2>
+                        </div>
+                        <p>Ask practical questions, exchange workflows and share the lessons that actually helped on a shoot.</p>
+                    </div>
+                    <div class="split">
+                        <article class="split-card reveal"><img
+                                src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                alt="Director and cinematographer reviewing footage on set">
+                            <div class="split-copy"><span class="tag">Discussion</span>
+                                <h3 style="margin-top:10px">What are you trying to solve?</h3>
+                                <p>Start with the real production problem. The community starts there too.</p>
+                            </div>
+                        </article>
+                        <article class="split-card reveal"><img
+                                src="https://images.pexels.com/photos/287240/pexels-photo-287240.jpeg?auto=compress&cs=tinysrgb&w=2400"
+                                alt="Behind the scenes film crew filming on location">
+                            <div class="split-copy"><span class="tag">Workflow</span>
+                                <h3 style="margin-top:10px">Share the process, not just the result.</h3>
+                                <p>Useful knowledge lives in the decisions behind the finished frame.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 2 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Community • Subsection 02 / Creator Workflow</div>
+                            <h2>From idea to finished frame.</h2>
+                        </div>
+                        <p>A simple five-step rhythm for repeatable creative excellence across every shoot.</p>
+                    </div>
+                    <div class="workflow">
+                        <div class="step reveal"><b>01 / DISCOVER</b>
+                            <h3>Find the reference.</h3>
+                            <p>Search the library and collect useful examples.</p>
+                        </div>
+                        <div class="step reveal"><b>02 / PLAN</b>
+                            <h3>Build the setup.</h3>
+                            <p>Prepare people, gear, location and visual priorities.</p>
+                        </div>
+                        <div class="step reveal"><b>03 / CAPTURE</b>
+                            <h3>Make the frame.</h3>
+                            <p>Apply technique, light and movement intentionally.</p>
+                        </div>
+                        <div class="step reveal"><b>04 / REFINE</b>
+                            <h3>Shape the story.</h3>
+                            <p>Edit, grade, sequence and polish the work.</p>
+                        </div>
+                        <div class="step reveal"><b>05 / SHARE</b>
+                            <h3>Return the lesson.</h3>
+                            <p>Share what worked so another creator moves faster.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 3 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Community • Subsection 03 / Network Scale</div>
+                            <h2>A community designed to scale.</h2>
+                        </div>
+                        <p>Clear information architecture lets a growing resource collection stay easy to navigate.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat reveal"><strong data-n="1200">0</strong><span>Knowledge references</span></div>
+                        <div class="stat reveal"><strong data-n="340">0</strong><span>Video lessons</span></div>
+                        <div class="stat reveal"><strong data-n="180">0</strong><span>Production templates</span></div>
+                        <div class="stat reveal"><strong data-n="24">0</strong><span>Creative disciplines</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             MENU SECTION 07: CONTACT
+             Subsection 1: Direct Production Inquiries & Consulting
+             Subsection 2: Studio Production Map & Facility Access
+             Subsection 3: Knowledge Base & FAQ
+             ======================================================== -->
+        <section id="contact" class="dark">
+            <div class="wrap">
+                <!-- Subsection 1 -->
+                <div class="subsection">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Contact • Subsection 01 / Production Inquiries</div>
+                            <h2>Bring your next creative question.</h2>
+                        </div>
+                        <p>Connect with directors, cinematographers, and post-production specialists across the network.</p>
+                    </div>
+                    <div class="contact">
+                        <div class="contact-card reveal">
+                            <div>
+                                <h3>Creative Resource Network</h3>
+                                <p style="margin-top:9px;color:var(--muted);font-size:.87rem;line-height:1.55;">Direct production inquiry desk & consultation office.</p>
+                                <div class="contact-list">
+                                    <div><small>Email</small>hello@frameforge.example</div>
+                                    <div><small>Phone & WhatsApp</small>+91 90000 12345</div>
+                                    <div><small>Studio Facility</small>Creative Media Hub, Cyber Enclave, Hyderabad, Telangana, India</div>
+                                    <div><small>Operating Hours</small>Mon – Sat: 08:00 – 21:00 IST • 24/7 Production Ingress</div>
+                                    <div><small>Production SLA</small>Immediate response for active set emergencies within 2 hours</div>
+                                </div>
+                            </div>
+                            <div class="contact-follow-section">
+                                <div class="follow-header">
+                                    <small class="follow-label">FOLLOW OUR CREATIVE CHANNELS</small>
+                                    <span class="follow-subtext">45k+ community creators</span>
+                                </div>
+                                <div class="contact-social-pills">
+                                    <button type="button" class="social-pill-btn" data-platform="YouTube" aria-label="YouTube Channel">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                        <span>YouTube</span>
+                                    </button>
+                                    <button type="button" class="social-pill-btn" data-platform="Instagram" aria-label="Instagram Gallery">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                        <span>Instagram</span>
+                                    </button>
+                                    <button type="button" class="social-pill-btn" data-platform="X" aria-label="X Community">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                        <span>X</span>
+                                    </button>
+                                    <button type="button" class="social-pill-btn" data-platform="Vimeo" aria-label="Vimeo Reels">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128 1.581-1.37 2.766-2.103 3.557-2.196 1.874-.18 3.024.877 3.454 3.172.464 2.472.784 4.02.96 4.646.527 2.384 1.114 3.576 1.761 3.576.495 0 1.259-.785 2.29-2.354 1.03-1.57 1.583-2.769 1.658-3.597.135-1.348-.382-2.022-1.554-2.022-.556 0-1.13.125-1.722.375 1.144-3.743 3.32-5.545 6.528-5.405 2.378.106 3.518 1.48 3.42 4.127z"/></svg>
+                                        <span>Vimeo</span>
+                                    </button>
+                                    <button type="button" class="social-pill-btn" data-platform="Discord" aria-label="Discord Crew">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                                        <span>Discord</span>
+                                    </button>
+                                </div>
+                                <div class="contact-follow-toast" id="contactFollowToast">Click any channel to view broadcast status</div>
+                            </div>
+                        </div>
+                        <form class="contact-card reveal" id="form">
+                            <div class="form-header">
+                                <span class="badge" style="background:rgba(185,255,74,0.12);color:var(--lime);border-color:rgba(185,255,74,0.3);margin-bottom:10px;">DIRECT DISPATCH</span>
+                                <h3>Direct Production Dispatch</h3>
+                                <p style="margin-top:8px;margin-bottom:22px;color:var(--muted);font-size:.87rem;line-height:1.55;">
+                                    Connect directly with studio producers, equipment technicians, and cinematography consultants. Average response within 2 hours.
+                                </p>
+                            </div>
+                            <div class="formgrid">
+                                <div class="field">
+                                    <label>YOUR NAME *</label>
+                                    <input required placeholder="Full name or company" autocomplete="name">
+                                </div>
+                                <div class="field">
+                                    <label>WORK EMAIL *</label>
+                                    <input required type="email" placeholder="you@production.com" autocomplete="email">
+                                </div>
+                                <div class="field">
+                                    <label>PHONE / WHATSAPP</label>
+                                    <input type="tel" placeholder="+91 98765 43210" autocomplete="tel">
+                                </div>
+                                <div class="field">
+                                    <label>INQUIRY TYPE *</label>
+                                    <select required>
+                                        <option value="" disabled selected>Select project category...</option>
+                                        <option value="cinema">Feature & Indie Cinema</option>
+                                        <option value="commercial">Commercial / Ad Campaign</option>
+                                        <option value="studio">Soundstage 4B Booking</option>
+                                        <option value="gear">Camera & Lens Testing</option>
+                                        <option value="post">Color Grading & Post-Production</option>
+                                        <option value="masterclass">Masterclass & Mentorship</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>PRODUCTION TIMELINE</label>
+                                    <select>
+                                        <option value="immediate">Immediate (Within 48 Hours)</option>
+                                        <option value="2weeks">Next 1 - 2 Weeks</option>
+                                        <option value="month">Next Month</option>
+                                        <option value="planning">Pre-Production / Planning</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>PREFERRED CONTACT METHOD</label>
+                                    <select>
+                                        <option value="email">Email Dispatch (Default)</option>
+                                        <option value="whatsapp">WhatsApp Studio Desk</option>
+                                        <option value="phone">Direct Phone Call</option>
+                                    </select>
+                                </div>
+                                <div class="field full">
+                                    <label>SUBJECT / PROJECT TITLE *</label>
+                                    <input required placeholder="E.g., Anamorphic camera package testing for commercial shoot">
+                                </div>
+                                <div class="field full">
+                                    <label>PROJECT SPECIFICATIONS & REQUIREMENTS *</label>
+                                    <textarea required placeholder="Specify your shooting dates, camera package preferences, crew size, lighting requirements, or technical questions..."></textarea>
+                                </div>
+                                <div class="field full">
+                                    <button class="btn primary" type="submit" style="width:100%;justify-content:center;padding:15px;font-size:.92rem;font-weight:700;">
+                                        <span>Send production dispatch →</span>
+                                    </button>
+                                </div>
+                                <div class="field full">
+                                    <div class="form-trust-bar">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                        <span>Encrypted Dispatch Protocol • Monitored 24/7 by Studio 4B control desk</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 2: Studio Production Map -->
+                <div class="subsection" id="map">
+                    <div class="head reveal">
+                        <div>
+                            <div class="eyebrow">Contact • Subsection 02 / Studio Production Map</div>
+                            <h2>Visit the soundstage & production hub.</h2>
+                        </div>
+                        <p>Central studio facility with drive-in soundstage access, gear checkout, and broadcast suites.</p>
+                    </div>
+
+                    <div class="simple-map-shell reveal">
+                        <div class="simple-map-grid">
+                            <div class="simple-map-frame-box">
+                                <div class="simple-map-floating-badge">
+                                    <span class="map-live-dot"></span>
+                                    STUDIO 4B • HYDERABAD HUB
+                                </div>
+                                <iframe 
+                                    title="FrameForge Studio Location Map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3198950802713!2d78.37563827593673!3d17.44442650116035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688ebb55786152!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="simple-map-info-card">
+                                <div>
+                                    <div class="map-info-header">
+                                        <span class="badge" style="background:rgba(98,230,255,0.12);color:var(--cyan);border-color:rgba(98,230,255,0.3);margin-bottom:12px;">FACILITY ACCESS</span>
+                                        <h3>Soundstage 4B & Hub</h3>
+                                        <p style="margin-top:8px;color:var(--muted);font-size:.85rem;line-height:1.5;">
+                                            Ground-level drive-in studio facility located in the Cyber Enclave production corridor.
+                                        </p>
+                                    </div>
+                                    <div class="map-info-points">
+                                        <div class="map-point-item">
+                                            <div class="map-point-icon">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                            </div>
+                                            <div>
+                                                <strong>Physical Address</strong>
+                                                <p>Creative Media Hub, Lot 4, Cyber Enclave, Hyderabad, Telangana 500081</p>
+                                            </div>
+                                        </div>
+                                        <div class="map-point-item">
+                                            <div class="map-point-icon">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                                            </div>
+                                            <div>
+                                                <strong>Heavy Equipment Dock</strong>
+                                                <p>14ft roll-up shutter access for 20ft grip trucks, generator bays & OB vans.</p>
+                                            </div>
+                                        </div>
+                                        <div class="map-point-item">
+                                            <div class="map-point-icon">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                            </div>
+                                            <div>
+                                                <strong>Express Transit</strong>
+                                                <p>25 min from HYD Airport via ORR Exit 19 • 5 min from Raidurg Metro.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="map-action-row">
+                                        <a href="https://maps.google.com/?q=Hitec+City+Hyderabad" target="_blank" rel="noopener noreferrer" class="btn primary" style="padding:11px 20px;font-size:.84rem;">
+                                            <span>Open in Google Maps ↗</span>
+                                        </a>
+                                        <button type="button" class="btn ghost" id="copyAddressBtn" style="padding:11px 18px;font-size:.84rem;">
+                                            <span>⎘ Copy Address</span>
+                                        </button>
+                                    </div>
+                                    <div class="copy-status" id="copyStatusText"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-divider"></div>
+
+                <!-- Subsection 3 -->
+                <div class="subsection">
+                    <div class="wrap faq" style="width:100%;padding:0">
+                        <div class="reveal">
+                            <div class="eyebrow">Contact • Subsection 03 / Knowledge Base FAQ</div>
+                            <h2>Clear answers.<br>No clutter.</h2>
+                            <p style="margin-top:17px">The content stays focused on photography, video and practical creator
+                                knowledge.</p>
+                        </div>
+                        <div class="faq-list reveal">
+                            <div class="faq-item open"><button class="faq-q">What is FrameForge? <span>+</span></button>
+                                <div class="faq-a">
+                                    <p>A photography and video resource network combining real visual references, masterclasses,
+                                        production templates, and creator community discussion.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item"><button class="faq-q">How are the visual sections animated?
+                                    <span>+</span></button>
+                                <div class="faq-a">
+                                    <p>They use real production photography with lightweight CSS camera drift, light sweeps,
+                                        and interactive 3D depth, keeping visual references authentic and performant.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item"><button class="faq-q">Are templates free to use on commercial productions?
+                                    <span>+</span></button>
+                                <div class="faq-a">
+                                    <p>Yes, all FrameForge checklists, shot list builders, and delivery matrices are free to use
+                                        and adapt for commercial and independent shoots.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <!-- Footer Newsletter Card -->
+            <div class="footer-newsletter-card reveal">
+                <div class="newsletter-info">
+                    <span class="badge" style="background:rgba(185,255,74,0.12);color:var(--lime);border-color:rgba(185,255,74,0.3);margin-bottom:12px;">CREATIVE DISPATCH</span>
+                    <h3>Curated camera craft.<br>Direct to your inbox.</h3>
+                    <p>Weekly breakdowns of production camera packages, lighting schematics, film LUT recipes, and sound staging workflows. Zero promotional fluff.</p>
+                </div>
+                <form class="newsletter-form" id="footerNewsletterForm" novalidate>
+                    <div class="newsletter-input-box">
+                        <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your creator email..." required aria-label="Email address for FrameForge dispatch" autocomplete="email">
+                        <button type="submit" class="btn btn-primary newsletter-btn" id="newsletterSubmitBtn">
+                            <span>Subscribe</span>
+                            <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <div class="newsletter-feedback" id="newsletterFeedback" role="status" aria-live="polite"></div>
+                    <p class="newsletter-note">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        100% privacy protected. No external spam. Unsubscribe anytime with one tap.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Footer Main Multi-Column Grid -->
+            <div class="footer-main-grid">
+                <!-- Col 1: Brand & Identity -->
+                <div class="footer-brand-col">
+                    <a class="brand" href="#home" aria-label="FrameForge Home">
+                        <span class="logo-mark" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" role="img">
+                                <defs>
+                                    <linearGradient id="lgFoot" x1="0" y1="0" x2="1" y2="1">
+                                        <stop stop-color="#b9ff4a" />
+                                        <stop offset="1" stop-color="#62e6ff" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="2" y="2" width="44" height="44" rx="14" fill="#0a1119" stroke="url(#lgFoot)" stroke-width="1.5" />
+                                <path d="M15 17h18v4H19v4h11v4H19v7h-4V17Z" fill="url(#lgFoot)" />
+                                <circle cx="34" cy="31" r="5.2" fill="none" stroke="#fff" stroke-width="2" />
+                                <path d="M31.3 31h5.4M34 28.3v5.4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        <span class="brand-word">FRAME<span>FORGE</span><b>.</b></span>
+                    </a>
+                    <p class="footer-desc">The open-access cinematography and media knowledge base engineered for directors, DPs, photographers, and motion graphic artists worldwide.</p>
+                    <div class="footer-status-badge">
+                        <span class="status-dot"></span> Production Network • Nodes Operational (v4.8)
+                    </div>
+                </div>
+
+
+                <!-- Col 3: Social Broadcast Channels -->
+                <div class="footer-col social-box">
+                    <h4 class="footer-col-title">Creator Broadcasts</h4>
+                    <p class="social-intro">Connect across our verified studio channels with zero broken links or external redirects:</p>
+                    <div class="social-row">
+                        <!-- YouTube -->
+                        <button type="button" class="social-btn" data-platform="YouTube" aria-label="YouTube Studio Channel" title="YouTube Studio Channel">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </button>
+                        <!-- Instagram -->
+                        <button type="button" class="social-btn" data-platform="Instagram" aria-label="Instagram Field Stills" title="Instagram Field Stills">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </button>
+                        <!-- X / Twitter -->
+                        <button type="button" class="social-btn" data-platform="X" aria-label="X / Twitter Field Dispatch" title="X / Twitter Field Dispatch">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </button>
+                        <!-- Vimeo -->
+                        <button type="button" class="social-btn" data-platform="Vimeo" aria-label="Vimeo Cinema Reels" title="Vimeo Cinema Reels">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128 1.581-1.37 2.766-2.103 3.557-2.196 1.874-.18 3.024.877 3.454 3.172.464 2.472.784 4.02.96 4.646.527 2.384 1.114 3.576 1.761 3.576.495 0 1.259-.785 2.29-2.354 1.03-1.57 1.583-2.769 1.658-3.597.135-1.348-.382-2.022-1.554-2.022-.556 0-1.13.125-1.722.375 1.144-3.743 3.32-5.545 6.528-5.405 2.378.106 3.518 1.48 3.42 4.127z"/></svg>
+                        </button>
+                        <!-- Discord -->
+                        <button type="button" class="social-btn" data-platform="Discord" aria-label="Discord Crew Guild" title="Discord Crew Guild">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        </button>
+                    </div>
+                    <div class="social-toast" id="socialToast" role="status" aria-live="polite">Click any icon to inspect broadcast channel details</div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal Bar: Copyrights, Terms & Conditions -->
+            <div class="footer-bottom-bar">
+                <p class="copyright-text">© 2026 FrameForge Network. All rights reserved. Creative Media Hub & Open Production Repository.</p>
+                <div class="legal-row">
+                    <button type="button" class="legal-btn" data-legal="terms">Terms & Conditions</button>
+                    <span style="color:rgba(255,255,255,0.18)">•</span>
+                    <button type="button" class="legal-btn" data-legal="privacy">Privacy Policy</button>
+                    <span style="color:rgba(255,255,255,0.18)">•</span>
+                    <button type="button" class="legal-btn" data-legal="licensing">Commercial Licensing</button>
+                    <span style="color:rgba(255,255,255,0.18)">•</span>
+                    <button type="button" class="legal-btn" data-legal="security">Security & Safety</button>
+                    <span style="color:rgba(255,255,255,0.18)">•</span>
+                    <button type="button" class="legal-btn" data-legal="cookies">Cookie Settings</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Legal & Policy Modal (Zero external links, 100% self-contained) -->
+    <div class="legal-modal-backdrop" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+        <div class="legal-modal-dialog">
+            <div class="legal-modal-header">
+                <div>
+                    <span class="badge" style="background:rgba(185,255,74,0.12);color:var(--lime);border-color:rgba(185,255,74,0.3);margin-bottom:8px;">LEGAL & GOVERNANCE</span>
+                    <h3 id="legalTitle">Terms & Conditions of Service</h3>
+                </div>
+                <button type="button" class="legal-modal-close" id="legalModalClose" aria-label="Close legal modal">✕</button>
+            </div>
+            <div class="legal-modal-tabs">
+                <button type="button" class="legal-tab-btn active" data-legal="terms">Terms & Conditions</button>
+                <button type="button" class="legal-tab-btn" data-legal="privacy">Privacy Policy</button>
+                <button type="button" class="legal-tab-btn" data-legal="licensing">Commercial Licensing</button>
+                <button type="button" class="legal-tab-btn" data-legal="security">Safety Standards</button>
+                <button type="button" class="legal-tab-btn" data-legal="cookies">Cookies & Storage</button>
+            </div>
+            <div class="legal-modal-body" id="legalBody">
+                <h4>1. Creative Community Agreement</h4>
+                <p>Welcome to FrameForge. By accessing our educational modules, downloadable templates, and knowledge base, you agree to comply with our community standard of professional and ethical creative conduct.</p>
+                <h4>2. Permitted Use of Assets</h4>
+                <p>All downloadable camera test charts, color LUTs, and lighting schematics provided under Free tiers are cleared for personal, educational, and commercial indie film production without royalty claims.</p>
+                <h4>3. Resale Prohibitions</h4>
+                <p>You may not package, redistribute, or resell FrameForge original presets, 3D LUT matrices, or course assets as standalone digital packs or stock items.</p>
+                <h4>4. Limitation of Liability</h4>
+                <p>Hardware rigging guides and electrical lighting power calculations are provided for educational guidance. Always follow certified studio safety regulations on active film sets.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button Throughout Website -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll back to top" title="Scroll back to top">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+        <span class="back-to-top-label">Top</span>
+    </button>
+    <script>
+        const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .12 }); document.querySelectorAll('.reveal').forEach(x => io.observe(x));
+        document.querySelectorAll('[data-n]').forEach(el => { const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const target = +el.dataset.n; let n = 0; const step = Math.max(1, Math.ceil(target / 55)); const run = () => { n = Math.min(target, n + step); el.textContent = n.toLocaleString(); if (n < target) requestAnimationFrame(run) }; run(); o.disconnect() } }), { threshold: .7 }); o.observe(el) });
+        document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => q.parentElement.classList.toggle('open')));
+        const hero = document.getElementById('tilt'); hero.addEventListener('pointermove', e => { const r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; hero.querySelector('.hero-img').style.transform = `rotateY(${x * -12}deg) rotateX(${y * 7}deg) rotateZ(1deg)` }); hero.addEventListener('pointerleave', () => hero.querySelector('.hero-img').style.transform = 'rotateY(-7deg) rotateZ(1deg)');
+        const contactForm = document.getElementById('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', e => {
+                e.preventDefault();
+                alert('✓ Dispatch received! Our studio production desk will review your specifications and respond within 2 hours.');
+                contactForm.reset();
+            });
+        }
+        const hamb = document.getElementById('hamb'); const links = document.getElementById('navLinks'); if (hamb && links) { hamb.addEventListener('click', () => { const isOpen = links.classList.toggle('open'); hamb.setAttribute('aria-expanded', isOpen ? 'true' : 'false'); hamb.textContent = isOpen ? '✕' : '☰' }); links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('open'); hamb.setAttribute('aria-expanded', 'false'); hamb.textContent = '☰' }) }) }; const hdr = document.getElementById('headerBg'); if (hdr) { const checkScroll = () => { if (window.scrollY > 15) { hdr.classList.add('scrolled') } else { hdr.classList.remove('scrolled') } }; window.addEventListener('scroll', checkScroll, { passive: true }); checkScroll() };
+        // ==========================================================
+        // CONTACT SECTION INTERACTIVITY (FOLLOW PILLS & ADDRESS COPY)
+        // ==========================================================
+        (function () {
+            // Copy Studio Address
+            const copyAddressBtn = document.getElementById('copyAddressBtn');
+            const copyStatusText = document.getElementById('copyStatusText');
+            if (copyAddressBtn) {
+                copyAddressBtn.addEventListener('click', () => {
+                    const address = 'Creative Media Hub, Lot 4, Cyber Enclave, Hyderabad, Telangana 500081';
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(address).then(() => {
+                            if (copyStatusText) {
+                                copyStatusText.textContent = '✓ Studio address copied to clipboard!';
+                                setTimeout(() => { copyStatusText.textContent = ''; }, 3000);
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Contact Card Follow Us Pills
+            const followPills = document.querySelectorAll('.social-pill-btn');
+            const followToast = document.getElementById('contactFollowToast');
+            const channelStatuses = {
+                'YouTube': '▶ YouTube 4K: Weekly Cinematography Breakdowns & Live Lighting Demos',
+                'Instagram': '📸 Instagram: Daily BTS Set Stills & Lens Bokeh Tests',
+                'X': '⚡ X / Twitter: Live Equipment Alerts & Quick Technical Dispatches',
+                'Vimeo': '🎞 Vimeo: Uncompressed Color Grade Showreels & Film Scans',
+                'Discord': '💬 Discord: 45k+ Creator Server • Live Set Troubleshooting Voice Channels'
+            };
+
+            if (followPills.length && followToast) {
+                followPills.forEach(pill => {
+                    pill.addEventListener('click', () => {
+                        const platform = pill.dataset.platform;
+                        const status = channelStatuses[platform] || `${platform} channel active`;
+                        followToast.textContent = status;
+                        followToast.style.color = 'var(--lime)';
+                        pill.style.transform = 'scale(0.94)';
+                        setTimeout(() => { pill.style.transform = ''; }, 160);
+                    });
+                });
+            }
+        })();
+
+        // Dynamic Active Menu Highlighting
+        const navLinks = document.querySelectorAll('#navLinks a');
+        const sectionIds = ['home', 'library', 'learn', 'templates', 'motion', 'community', 'contact'];
+        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+        function setActiveNav(id) {
+            navLinks.forEach(link => {
+                if (link.classList.contains('btn') || link.classList.contains('mobile-cta')) return;
+                const href = link.getAttribute('href');
+                if (href === '#' + id) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.classList.remove('active');
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function updateActiveNav() {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+
+            if (scrollY < 80) {
+                setActiveNav('home');
+                return;
+            }
+            if (windowHeight + scrollY >= docHeight - 70) {
+                setActiveNav('contact');
+                return;
+            }
+
+            let activeId = 'home';
+            const offset = 140;
+            for (let i = 0; i < sections.length; i++) {
+                const sec = sections[i];
+                if (sec.offsetTop - offset <= scrollY) {
+                    activeId = sec.id;
+                }
+            }
+            setActiveNav(activeId);
+        }
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('resize', updateActiveNav, { passive: true });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (link.classList.contains('btn') || link.classList.contains('mobile-cta')) return;
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    setActiveNav(href.substring(1));
+                }
+            });
+        });
+        updateActiveNav();
+
+        // ==========================================================
+        // FLOATING BACK TO TOP FUNCTION (GLOBAL THROUGHOUT WEBSITE)
+        // ==========================================================
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            const handleBackToTopScroll = () => {
+                if (window.scrollY > 320) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
+            window.addEventListener('scroll', handleBackToTopScroll, { passive: true });
+            handleBackToTopScroll();
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // ==========================================================
+        // FOOTER NEWSLETTER SUBSCRIPTION (SELF-CONTAINED / NO LINKS)
+        // ==========================================================
+        const newsletterForm = document.getElementById('footerNewsletterForm');
+        const newsletterEmail = document.getElementById('newsletterEmail');
+        const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+        if (newsletterForm && newsletterEmail && newsletterFeedback) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailVal = newsletterEmail.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(emailVal)) {
+                    newsletterFeedback.className = 'newsletter-feedback error';
+                    newsletterFeedback.textContent = 'Please enter a valid creator email address.';
+                    newsletterEmail.focus();
+                    return;
+                }
+
+                newsletterFeedback.className = 'newsletter-feedback success';
+                newsletterFeedback.textContent = `✓ Subscribed ${emailVal}! Welcome to the FrameForge Creative Dispatch.`;
+                newsletterEmail.value = '';
+
+                setTimeout(() => {
+                    newsletterFeedback.style.opacity = '0';
+                    setTimeout(() => {
+                        newsletterFeedback.textContent = '';
+                        newsletterFeedback.style.opacity = '1';
+                        newsletterFeedback.className = 'newsletter-feedback';
+                    }, 400);
+                }, 6000);
+            });
+        }
+
+        // ==========================================================
+        // FOOTER SOCIAL ICONS (CLEAN FEEDBACK / ZERO DEAD LINKS)
+        // ==========================================================
+        const socialButtons = document.querySelectorAll('.social-btn');
+        const socialToast = document.getElementById('socialToast');
+
+        if (socialButtons.length && socialToast) {
+            const platformInfo = {
+                'YouTube': 'YouTube 4K Broadcast: @FrameForgeCinema (142 Masterclasses)',
+                'Instagram': 'Instagram Visual Gallery: @FrameForge.Craft (Daily Lighting Breakdowns)',
+                'X': 'X Live Dispatches: @FrameForgeX (Field Rigs & Camera Specs)',
+                'Vimeo': 'Vimeo Cinema Channel: vimeo.com/channels/frameforge (Graded RAW Reels)',
+                'Discord': 'Creator Discord Guild: 45,000+ Directors, DPs & Colorists Active'
+            };
+
+            socialButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const platform = btn.dataset.platform;
+                    const info = platformInfo[platform] || `${platform} Connected`;
+                    socialToast.textContent = info;
+                    socialToast.style.color = 'var(--lime)';
+                    socialToast.style.opacity = '1';
+
+                    btn.style.transform = 'scale(0.92)';
+                    setTimeout(() => {
+                        btn.style.transform = '';
+                    }, 180);
+                });
+            });
+        }
+
+        // ==========================================================
+        // INTERACTIVE LEGAL MODAL (TERMS & CONDITIONS, PRIVACY, ETC.)
+        // ==========================================================
+        const legalModal = document.getElementById('legalModal');
+        const legalTitle = document.getElementById('legalTitle');
+        const legalBody = document.getElementById('legalBody');
+        const legalModalClose = document.getElementById('legalModalClose');
+        const legalTriggers = document.querySelectorAll('.legal-btn, .legal-tab-btn');
+        const legalTabs = document.querySelectorAll('.legal-tab-btn');
+
+        const legalDocuments = {
+            terms: {
+                title: 'Terms & Conditions of Service',
+                html: `
+                    <h4>1. Creative Community Agreement</h4>
+                    <p>Welcome to FrameForge. By accessing our educational modules, downloadable templates, and knowledge network, you agree to comply with our community standard of professional and ethical creative conduct.</p>
+                    <h4>2. Permitted Use of Assets</h4>
+                    <p>All downloadable camera test charts, color LUTs, and lighting schematics provided under Free tiers are cleared for personal, educational, and commercial indie film production without royalty claims.</p>
+                    <h4>3. Resale Prohibitions</h4>
+                    <p>You may not package, redistribute, or resell FrameForge original presets, 3D LUT matrices, or course assets as standalone digital packs or stock items.</p>
+                    <h4>4. Limitation of Liability</h4>
+                    <p>Hardware rigging guides and electrical lighting power calculations are provided for educational guidance. Always follow certified studio safety regulations on active film sets.</p>
+                `
+            },
+            privacy: {
+                title: 'Privacy Policy & Data Ethics',
+                html: `
+                    <h4>1. Creator First Privacy</h4>
+                    <p>FrameForge operates on a privacy-respecting foundation. We do not sell, rent, or lease creator contact information, email subscriptions, or browsing metrics to third-party ad networks.</p>
+                    <h4>2. Minimal Data Collection</h4>
+                    <p>When you subscribe to the Creative Dispatch, your email address is encrypted and utilized solely for sending educational breakdowns, production notes, and network updates.</p>
+                    <h4>3. Unsubscribe Anytime</h4>
+                    <p>Every dispatch contains a one-click unsubscribe mechanism. You may also request complete removal of your address from our dispatch database at any time without fees.</p>
+                `
+            },
+            licensing: {
+                title: 'Commercial Media Licensing',
+                html: `
+                    <h4>1. Standard Creative License</h4>
+                    <p>Covers unlimited commercial broadcasts, streaming distribution, festivals, YouTube/social channels, and corporate videos for projects utilizing FrameForge audio presets and LUTs.</p>
+                    <h4>2. Production Stems & Footage</h4>
+                    <p>Raw camera samples from RED, ARRI, Sony, and Blackmagic are provided for grading practice and showreel educational evaluation. Full broadcast clearance applies to Pro members.</p>
+                `
+            },
+            security: {
+                title: 'Security & Production Safety Standards',
+                html: `
+                    <h4>1. Studio Digital Integrity</h4>
+                    <p>All downloadable zip archives and scripts are cryptographically verified and scanned against malicious payloads before release to our repository.</p>
+                    <h4>2. Safe Set Standards</h4>
+                    <p>Our motion control and lighting diagrams conform to IATSE and OSHA electrical safety guidelines for cinema lighting grids and heavy jib mounts.</p>
+                `
+            },
+            cookies: {
+                title: 'Cookie Preferences & Storage',
+                html: `
+                    <h4>1. Essential Storage Only</h4>
+                    <p>We use lightweight browser localStorage exclusively to retain your UI theme preferences and map interaction states. No third-party profiling cookies are injected.</p>
+                    <h4>2. Clean Experience</h4>
+                    <p>Enjoy an uncluttered creative workflow without invasive cross-site tracking pixels or telemetry trackers.</p>
+                `
+            }
+        };
+
+        function openLegal(key) {
+            const doc = legalDocuments[key] || legalDocuments.terms;
+            if (legalTitle) legalTitle.textContent = doc.title;
+            if (legalBody) legalBody.innerHTML = doc.html;
+            legalTabs.forEach(tab => {
+                if (tab.dataset.legal === key) tab.classList.add('active');
+                else tab.classList.remove('active');
+            });
+            if (legalModal) {
+                legalModal.classList.add('open');
+                legalModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLegal() {
+            if (legalModal) {
+                legalModal.classList.remove('open');
+                legalModal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+        }
+
+        legalTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const key = btn.dataset.legal || 'terms';
+                openLegal(key);
+            });
+        });
+
+        if (legalModalClose) {
+            legalModalClose.addEventListener('click', closeLegal);
+        }
+
+        if (legalModal) {
+            legalModal.addEventListener('click', (e) => {
+                if (e.target === legalModal) closeLegal();
+            });
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && legalModal && legalModal.classList.contains('open')) {
+                closeLegal();
+            }
+        });
+    </script>
+</body>
+
+</html>
