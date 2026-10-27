@@ -236,7 +236,8 @@
             box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
         }
 
-        .btn.primary {
+        .btn.primary,
+        .btn-primary {
             background: #0f172a;
             color: #ffffff;
             border: 2px solid #0f172a;
@@ -244,10 +245,11 @@
             box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
         }
 
-        .btn.primary:hover {
+        .btn.primary:hover,
+        .btn-primary:hover {
             background: #1e293b;
             border-color: #1e293b;
-            color: #ffffff;
+            color: #ffffff !important;
             box-shadow: 0 10px 28px rgba(15, 23, 42, 0.25);
         }
 
@@ -741,6 +743,7 @@
             color: #0f172a;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
             transition: all .25s ease;
+            white-space: nowrap;
         }
 
         .card .body a.btn:hover,
@@ -1641,19 +1644,40 @@
             flex-shrink: 0;
             transition: all 0.25s ease;
             background: #0f172a;
-            color: #ffffff;
+            color: #ffffff !important;
             border: 2px solid #0f172a;
         }
 
-        .newsletter-btn:hover {
-            background: #1e293b;
-            border-color: #1e293b;
-            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+        .newsletter-btn span {
+            color: #ffffff !important;
+            transition: color 0.25s ease;
         }
 
-        .newsletter-btn:hover {
+        .newsletter-btn svg {
+            color: #ffffff !important;
+            fill: #ffffff !important;
+            transition: transform 0.25s ease;
+        }
+
+        .newsletter-btn:hover,
+        .newsletter-btn:focus-visible {
+            background: #1e293b;
+            border-color: #1e293b;
+            color: #ffffff !important;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(185, 255, 74, 0.3);
+            box-shadow: 0 8px 20px rgba(185, 255, 74, 0.35);
+        }
+
+        .newsletter-btn:hover span,
+        .newsletter-btn:focus-visible span {
+            color: #ffffff !important;
+        }
+
+        .newsletter-btn:hover svg,
+        .newsletter-btn:focus-visible svg {
+            color: #ffffff !important;
+            fill: #ffffff !important;
+            transform: translateX(3px);
         }
 
         .newsletter-feedback {
@@ -2228,11 +2252,38 @@
                 text-align: center;
             }
 
-            .card .body a.btn {
+            .card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card .body {
+                padding: 22px 14px 20px;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .card .body h3 {
+                margin: 0 0 10px 0 !important;
+            }
+
+            .card .body p {
+                margin: 0 0 18px 0;
+                flex-grow: 1;
+            }
+
+            .card .body a.btn,
+            .card .body .btn {
                 width: 100%;
                 justify-content: center;
                 text-align: center;
-                margin-top: 14px;
+                margin-top: auto !important;
+                white-space: nowrap !important;
+                padding: 0 8px;
+                font-size: clamp(0.74rem, 1.05vw, 0.84rem);
+                letter-spacing: -0.01em;
             }
 
             .grid4,
@@ -2522,13 +2573,15 @@
                 margin-right: auto;
             }
 
-            .card .body a.btn {
+            .card .body a.btn,
+            .card .body .btn {
                 width: 100%;
                 min-height: 48px;
-                margin-top: auto;
+                margin-top: auto !important;
                 font-size: .88rem;
                 justify-content: center;
                 text-align: center;
+                white-space: nowrap !important;
             }
 
             .split-copy {
@@ -2936,7 +2989,7 @@
                                 <span class="tag">Camera craft</span>
                                 <h3>Camera movement</h3>
                                 <p>Understand framing, motion and camera placement through real production examples.</p>
-                                <a class="btn" href="#contact">View lesson →</a>
+                                <a class="btn" href="#contact">Explore →</a>
                             </div>
                         </article>
                         <article class="card reveal">
@@ -2947,7 +3000,7 @@
                                 <span class="tag">Production</span>
                                 <h3>Production setup</h3>
                                 <p>Build practical shoot systems around gear, crew, location and visual intent.</p>
-                                <a class="btn" href="#contact">See templates →</a>
+                                <a class="btn" href="#contact">Templates →</a>
                             </div>
                         </article>
                         <article class="card reveal">
@@ -2958,7 +3011,7 @@
                                 <span class="tag">Field craft</span>
                                 <h3>Shoot with intention</h3>
                                 <p>Use light, perspective and movement to create stronger visual storytelling.</p>
-                                <a class="btn" href="#contact">Start learning →</a>
+                                <a class="btn" href="#contact">Learn →</a>
                             </div>
                         </article>
                     </div>
